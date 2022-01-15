@@ -24,7 +24,7 @@ function Login() {
                      <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 ">
                         <Form.Control type="email" placeholder="name@example.com" autoComplete="off" />
                      </FloatingLabel>
-                     <FloatingLabel controlId="floatingPassword" label="Password" className="">
+                     <FloatingLabel controlId="floatingPassword" label="Password">
                         <Form.Control type="password" placeholder="Password" autoComplete="off" />
                      </FloatingLabel>
                      <a href="/dashboard" className={monitor ? "btn btn-lg btn-success btn-block w-100 mt-4" : "btn btn-success btn-block w-100 mt-4"}>

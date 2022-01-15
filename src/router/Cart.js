@@ -57,7 +57,7 @@ const Cart = () => {
          setEastJ(false);
          setNorthS(false);
       }
-   });
+   }, [city]);
 
    return (
       <div className="pt-5" style={{ height: "1000px" }}>
@@ -159,10 +159,8 @@ const Cart = () => {
                <Col md={6}>
                   <Form>
                      <Form.Group controlId="formBasicEmail">
-                        <Form.Label className="fw-bold mt-4" for="addressOne">
-                           Address 1
-                        </Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 1" value={adres1} id="addressOne" onChange={(e) => setAdres1(e.target.value)} autoComplete="off" />
+                        <Form.Label className="fw-bold mt-4">Address 1</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Adress 1" value={adres1} onChange={(e) => setAdres1(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
@@ -170,13 +168,13 @@ const Cart = () => {
                   <Form>
                      <Form.Group controlId="formBasicPassword">
                         <Form.Label className="fw-bold mt-4">Adress 2</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 2" value={adres2} id="addressOne" onChange={(e) => setAdres2(e.target.value)} autoComplete="off" />
+                        <Form.Control type="text" placeholder="Enter Adress 2" value={adres2} onChange={(e) => setAdres2(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
             </Row>
             <Row>
-               <Col md={6}>
+               <Col md={4}>
                   <Form.Label className="fw-bold mt-4">Province</Form.Label>
                   <Form.Select onChange={(e) => setCity(e.target.value)} aria-label="Default select example">
                      <option disabled selected>
@@ -189,7 +187,7 @@ const Cart = () => {
                      <option value="Papua">Papua</option>
                   </Form.Select>
                </Col>
-               <Col md={6}>
+               <Col md={4}>
                   <Form.Label className="fw-bold mt-4">City</Form.Label>
                   <Form.Select aria-label="Default select example">
                      {city === "Default" ? (
@@ -251,11 +249,11 @@ const Cart = () => {
                      )}
                   </Form.Select>
                </Col>
-               <Col>
+               <Col md={4}>
                   <Form>
                      <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className="fw-bold mt-4">Postal Code</Form.Label>
-                        <Form.Control type="number" placeholder="Enter Your Postal Code" value={pCode} id="addressOne" onChange={(e) => setPCode(e.target.value)} autoComplete="off" />
+                        <Form.Control type="number" placeholder="Enter Your Postal Code" value={pCode} onChange={(e) => setPCode(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
@@ -273,7 +271,7 @@ const Cart = () => {
                   <Form>
                      <Form.Group controlId="formBasicPassword">
                         <Form.Label className="fw-bold mt-4">No Phone</Form.Label>
-                        <Form.Control type="tel" placeholder="Enter Number Phone" value={noPhone} id="addressOne" onChange={(e) => setNoPhone(e.target.value)} autoComplete="off" />
+                        <Form.Control type="tel" placeholder="Enter Number Phone" value={noPhone} onChange={(e) => setNoPhone(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
