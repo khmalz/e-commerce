@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.95em !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.bg-abu {
+  background-color: #f4f4f4 !important;
+}
+
+.text-harga {
+  color: #ff8d79 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.activation {
+  color: #ff7158 !important;
+}
+
+.scale:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  transition: 400ms;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+}
+
+.scale .card-shadow:hover {
+  -webkit-box-shadow: 0 0 13px black;
+          box-shadow: 0 0 13px black;
+  transition: 150ms;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+}
+
+.thumb {
+  width: 100% !important;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  height: auto;
+}
+
+.thumb:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@-webkit-keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fade 0.4s forwards;
+  -webkit-animation: fade 0.4s forwards;
+}
+
+.actived {
+  opacity: 0.7;
+}
+
+.containerno {
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.page404 {
+  width: 400px;
+  height: auto;
+}
+
+#tree {
+  stroke: #59513c;
+}
+
+#wood-stump {
+  stroke: #59513c;
+  -webkit-animation: wood-stump 3s infinite ease-in-out;
+  animation: wood-stump 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes wood-stump {
+  0% {
+    -webkit-transform: translate(100px);
+  }
+  50% {
+    -webkit-transform: translate(50px);
+  }
+  100% {
+    -webkit-transform: translate(100px);
+  }
+}
+
+@keyframes wood-stump {
+  0% {
+    -webkit-transform: translate(100px);
+    transform: translate(100px);
+  }
+  50% {
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+  }
+  100% {
+    -webkit-transform: translate(100px);
+    transform: translate(100px);
+  }
+}
+
+#leaf {
+  stroke: #59513c;
+  -webkit-animation: leaf 7s infinite ease-in-out;
+  animation: leaf 7s infinite ease-in-out;
+}
+
+@-webkit-keyframes leaf {
+  0% {
+    -webkit-transform: translate(0, 70px);
+  }
+  50% {
+    -webkit-transform: translate(0, 50px);
+  }
+  100% {
+    -webkit-transform: translate(0, 70px);
+  }
+}
+
+@keyframes leaf {
+  0% {
+    -webkit-transform: translate(0, 70px);
+    transform: translate(0, 70px);
+  }
+  50% {
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+  }
+  100% {
+    -webkit-transform: translate(0, 70px);
+    transform: translate(0, 70px);
+  }
+}
+
+#border {
+  stroke: #59513c;
+}
+
+#Page {
+  fill: #59513c;
+}
+
+#notFound {
+  fill: #a7444b;
+}
+/*# sourceMappingURL=main.css.map */
