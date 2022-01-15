@@ -7,10 +7,7 @@ import pc3 from "../images/product-card-3.png";
 import { useState, useEffect } from "react";
 
 const Cart = () => {
-   const [adres1, setAdres1] = useState("Jln Halim Perdanakusuma");
-   const [adres2, setAdres2] = useState("Blok 3 No. 35");
-   const [pCode, setPCode] = useState("17154");
-   const [noPhone, setNoPhone] = useState("087984366758");
+   const [input, setInput] = useState({ adres1: "Jln Halim Perdanakusuma", adres2: "Blok 3 No. 35", pCode: "17154", noPhone: "087984366758" });
 
    const [city, setCity] = useState("Default");
    const [westJ, setWestJ] = useState(false);
@@ -26,6 +23,12 @@ const Cart = () => {
    const Papua = ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"];
 
    useEffect(() => {
+      // fetch("http://www.emsifa.com/api-wilayah-indonesia/api/regencies/31.json")
+      //    .then((response) => response.json())
+      //    .then((has) => {
+      //       has.map((e) => console.log(e.name));
+      //    });
+
       if (city === "JaBar") {
          setWestJ(true);
          setJakr(false);
@@ -158,17 +161,17 @@ const Cart = () => {
             <Row>
                <Col md={6}>
                   <Form>
-                     <Form.Group controlId="formBasicEmail">
+                     <Form.Group controlId="formBasicAddress1">
                         <Form.Label className="fw-bold mt-4">Address 1</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 1" value={adres1} onChange={(e) => setAdres1(e.target.value)} autoComplete="off" />
+                        <Form.Control type="text" placeholder="Enter Adress 1" value={input.adres1} onChange={(e) => setInput({ ...input, adres1: e.target.value })} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
                <Col md={6}>
                   <Form>
-                     <Form.Group controlId="formBasicPassword">
+                     <Form.Group controlId="formBasicAddress2">
                         <Form.Label className="fw-bold mt-4">Adress 2</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 2" value={adres2} onChange={(e) => setAdres2(e.target.value)} autoComplete="off" />
+                        <Form.Control type="text" placeholder="Enter Adress 2" value={input.adres2} onChange={(e) => setInput({ ...input, adres2: e.target.value })} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
@@ -195,9 +198,7 @@ const Cart = () => {
                            <option disabled selected>
                               Select Your City
                            </option>
-                           {Jabar.map((e) => (
-                              <option>{e}</option>
-                           ))}
+                           <option disabled>Pilih Provinsi Dahulu</option>
                         </>
                      ) : (
                         ""
@@ -251,9 +252,9 @@ const Cart = () => {
                </Col>
                <Col md={4}>
                   <Form>
-                     <Form.Group className="mb-3" controlId="formBasicPassword">
+                     <Form.Group className="mb-3" controlId="formBasicPostal">
                         <Form.Label className="fw-bold mt-4">Postal Code</Form.Label>
-                        <Form.Control type="number" placeholder="Enter Your Postal Code" value={pCode} onChange={(e) => setPCode(e.target.value)} autoComplete="off" />
+                        <Form.Control type="number" placeholder="Enter Your Postal Code" value={input.pCode} onChange={(e) => setInput({ ...input, pCode: e.target.value })} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
@@ -261,7 +262,7 @@ const Cart = () => {
             <Row>
                <Col md={6}>
                   <Form>
-                     <Form.Group controlId="formBasicEmail">
+                     <Form.Group controlId="formBasicCountry">
                         <Form.Label className="fw-bold mt-4">Country</Form.Label>
                         <Form.Control type="text" placeholder="Enter Country" value="Indonesia" />
                      </Form.Group>
@@ -269,9 +270,9 @@ const Cart = () => {
                </Col>
                <Col md={6}>
                   <Form>
-                     <Form.Group controlId="formBasicPassword">
+                     <Form.Group controlId="formBasicPhone">
                         <Form.Label className="fw-bold mt-4">No Phone</Form.Label>
-                        <Form.Control type="tel" placeholder="Enter Number Phone" value={noPhone} onChange={(e) => setNoPhone(e.target.value)} autoComplete="off" />
+                        <Form.Control type="tel" placeholder="Enter Number Phone" value={input.noPhone} onChange={(e) => setInput({ ...input, noPhone: e.target.value })} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>

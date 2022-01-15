@@ -22,7 +22,7 @@ function Register() {
                      <FloatingLabel controlId="floatingInput" label="Full Name" className="mb-3 ">
                         <Form.Control type="text" placeholder="Nakamura" autoComplete="off" />
                      </FloatingLabel>
-                     <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
+                     <FloatingLabel controlId="floatingEmail" label="Email address" className="mb-3">
                         <Form.Control type="email" placeholder="name@example.com" autoComplete="off" />
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingPassword" label="Password">
@@ -57,7 +57,7 @@ function Register() {
 
                      {checked ? (
                         <>
-                           <FloatingLabel controlId="floatingInput" label="Store Name" className="mb-3 mt-2">
+                           <FloatingLabel controlId="floatingText" label="Store Name" className="mb-3 mt-2">
                               <Form.Control type="text" placeholder="example" autoComplete="off" />
                            </FloatingLabel>
                            <FloatingLabel controlId="floatingSelect" label="Kategori" className="my-2">
