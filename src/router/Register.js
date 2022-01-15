@@ -11,7 +11,7 @@ function Register() {
       <div>
          <NavbarM />
 
-         <Container className="mt-5 pt-4">
+         <Container className="mt-5 pt-5" style={{ height: "800px" }}>
             <Row className="align-items-center justify-content-center">
                <Col lg={4}>
                   <h2>
@@ -20,13 +20,13 @@ function Register() {
                   </h2>
                   <Form action="" className="mt-3">
                      <FloatingLabel controlId="floatingInput" label="Full Name" className="mb-3 ">
-                        <Form.Control type="text" placeholder="Nakamura" />
+                        <Form.Control type="text" placeholder="Nakamura" autoComplete="off" />
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
-                        <Form.Control type="email" placeholder="name@example.com" />
+                        <Form.Control type="email" placeholder="name@example.com" autoComplete="off" />
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingPassword" label="Password">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password" autoComplete="off" />
                      </FloatingLabel>
                      <hr />
                      <div className="form-group mt-3">
@@ -58,7 +58,7 @@ function Register() {
                      {checked ? (
                         <>
                            <FloatingLabel controlId="floatingInput" label="Store Name" className="mb-3 mt-2">
-                              <Form.Control type="text" placeholder="example" />
+                              <Form.Control type="text" placeholder="example" autoComplete="off" />
                            </FloatingLabel>
                            <FloatingLabel controlId="floatingSelect" label="Kategori" className="my-2">
                               <Form.Select aria-label="Floating label select example">

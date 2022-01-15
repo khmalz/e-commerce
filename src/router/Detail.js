@@ -33,7 +33,7 @@ const Detail = () => {
       window.addEventListener("click", imgClick);
 
       return () => {
-         window.removeEventListener("keydown", imgClick);
+         window.removeEventListener("click", imgClick);
       };
    }, []);
 

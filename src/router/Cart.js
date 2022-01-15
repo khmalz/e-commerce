@@ -7,37 +7,55 @@ import pc3 from "../images/product-card-3.png";
 import { useState, useEffect } from "react";
 
 const Cart = () => {
+   const [adres1, setAdres1] = useState("Jln Halim Perdanakusuma");
+   const [adres2, setAdres2] = useState("Blok 3 No. 35");
+   const [pCode, setPCode] = useState("17154");
+   const [noPhone, setNoPhone] = useState("087984366758");
+
    const [city, setCity] = useState("Default");
    const [westJ, setWestJ] = useState(false);
+   const [jakr, setJakr] = useState(false);
    const [eastJ, setEastJ] = useState(false);
    const [northS, setNorthS] = useState(false);
    const [papua, setPapua] = useState(false);
 
-   const ChangeCity = (e) => {
-      setCity(e.target.value);
-   };
+   const Jakarta = ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"];
+   const Jabar = ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"];
+   const Jatim = ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"];
+   const Sumut = ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"];
+   const Papua = ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"];
 
    useEffect(() => {
-      if (city === "WestJava") {
+      if (city === "JaBar") {
          setWestJ(true);
+         setJakr(false);
          setEastJ(false);
          setNorthS(false);
          setPapua(false);
-      } else if (city === "EastJava") {
+      } else if (city === "Jakarta") {
+         setJakr(true);
          setWestJ(false);
+         setEastJ(false);
+         setNorthS(false);
+         setPapua(false);
+      } else if (city === "JaTim") {
          setEastJ(true);
+         setJakr(false);
+         setWestJ(false);
          setNorthS(false);
          setPapua(false);
-      } else if (city === "NorthSumatra") {
+      } else if (city === "NorSu") {
+         setNorthS(true);
+         setJakr(false);
          setWestJ(false);
          setEastJ(false);
-         setNorthS(true);
          setPapua(false);
       } else if (city === "Papua") {
+         setPapua(true);
+         setJakr(false);
          setWestJ(false);
          setEastJ(false);
          setNorthS(false);
-         setPapua(true);
       }
    });
 
@@ -138,37 +156,40 @@ const Cart = () => {
                </Col>
             </Row>
             <Row>
-               <Col>
+               <Col md={6}>
                   <Form>
                      <Form.Group controlId="formBasicEmail">
-                        <Form.Label className="fw-bold mt-4">Address 1</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 1" value="Bekasi Timur Regensi" />
+                        <Form.Label className="fw-bold mt-4" for="addressOne">
+                           Address 1
+                        </Form.Label>
+                        <Form.Control type="text" placeholder="Enter Adress 1" value={adres1} id="addressOne" onChange={(e) => setAdres1(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
-               <Col>
+               <Col md={6}>
                   <Form>
                      <Form.Group controlId="formBasicPassword">
                         <Form.Label className="fw-bold mt-4">Adress 2</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Adress 2" value="Blok I3 No.35" />
+                        <Form.Control type="text" placeholder="Enter Adress 2" value={adres2} id="addressOne" onChange={(e) => setAdres2(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
             </Row>
             <Row>
-               <Col>
+               <Col md={6}>
                   <Form.Label className="fw-bold mt-4">Province</Form.Label>
-                  <Form.Select onChange={ChangeCity} aria-label="Default select example">
+                  <Form.Select onChange={(e) => setCity(e.target.value)} aria-label="Default select example">
                      <option disabled selected>
                         Select Your Province
                      </option>
-                     <option value="WestJava">West Java</option>
-                     <option value="EastJava">East Java</option>
-                     <option value="NorthSumatra">North Sumatra</option>
+                     <option value="Jakarta">DKI Jakarta</option>
+                     <option value="JaBar">Jawa Barat</option>
+                     <option value="JaTim">Jawa Timur</option>
+                     <option value="NorSu">Sumatra Utara</option>
                      <option value="Papua">Papua</option>
                   </Form.Select>
                </Col>
-               <Col>
+               <Col md={6}>
                   <Form.Label className="fw-bold mt-4">City</Form.Label>
                   <Form.Select aria-label="Default select example">
                      {city === "Default" ? (
@@ -176,45 +197,54 @@ const Cart = () => {
                            <option disabled selected>
                               Select Your City
                            </option>
-                           <option value="1">Bandung</option>
-                           <option value="2">Bogor</option>
-                           <option value="3">Bekasi</option>
+                           {Jabar.map((e) => (
+                              <option>{e}</option>
+                           ))}
+                        </>
+                     ) : (
+                        ""
+                     )}
+                     {jakr ? (
+                        <>
+                           {Jakarta.map((e) => (
+                              <option>{e}</option>
+                           ))}
                         </>
                      ) : (
                         ""
                      )}
                      {westJ ? (
                         <>
-                           <option value="1">Bandung</option>
-                           <option value="2">Bogor</option>
-                           <option value="3">Bekasi</option>
+                           {Jabar.map((e) => (
+                              <option>{e}</option>
+                           ))}
                         </>
                      ) : (
                         ""
                      )}
                      {eastJ ? (
                         <>
-                           <option value="1">Surabaya</option>
-                           <option value="2">Kediri</option>
-                           <option value="3">Malang</option>
+                           {Jatim.map((e) => (
+                              <option>{e}</option>
+                           ))}
                         </>
                      ) : (
                         ""
                      )}
                      {northS ? (
                         <>
-                           <option value="1">Medan</option>
-                           <option value="2">Binjai</option>
-                           <option value="3">Tanjung Balai</option>
+                           {Sumut.map((e) => (
+                              <option>{e}</option>
+                           ))}
                         </>
                      ) : (
                         ""
                      )}
                      {papua ? (
                         <>
-                           <option value="1">Jayapura</option>
-                           <option value="2">Manokwari</option>
-                           <option value="3">Serui</option>
+                           {Papua.map((e) => (
+                              <option>{e}</option>
+                           ))}
                         </>
                      ) : (
                         ""
@@ -225,11 +255,42 @@ const Cart = () => {
                   <Form>
                      <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className="fw-bold mt-4">Postal Code</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Your Pastel Code" value="17154" />
+                        <Form.Control type="number" placeholder="Enter Your Postal Code" value={pCode} id="addressOne" onChange={(e) => setPCode(e.target.value)} autoComplete="off" />
                      </Form.Group>
                   </Form>
                </Col>
             </Row>
+            <Row>
+               <Col md={6}>
+                  <Form>
+                     <Form.Group controlId="formBasicEmail">
+                        <Form.Label className="fw-bold mt-4">Country</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Country" value="Indonesia" />
+                     </Form.Group>
+                  </Form>
+               </Col>
+               <Col md={6}>
+                  <Form>
+                     <Form.Group controlId="formBasicPassword">
+                        <Form.Label className="fw-bold mt-4">No Phone</Form.Label>
+                        <Form.Control type="tel" placeholder="Enter Number Phone" value={noPhone} id="addressOne" onChange={(e) => setNoPhone(e.target.value)} autoComplete="off" />
+                     </Form.Group>
+                  </Form>
+               </Col>
+            </Row>
+
+            {/* ---------------------------------------------------------------------------------------------------- | Footer | -------------------------------------------------------------------------------------------------  */}
+
+            <footer className="mt-5">
+               <hr />
+               <Container>
+                  <Row>
+                     <Col className="col-12 text-center text-secondary">
+                        <p className="pt-4 pb-2">2022 &copy;Copyright Akmal. All Right Reserved</p>
+                     </Col>
+                  </Row>
+               </Container>
+            </footer>
          </Container>
       </div>
    );

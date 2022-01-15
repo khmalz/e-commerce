@@ -4,6 +4,8 @@ import lplc from "../images/login-placeholder.png";
 import NavbarM from "./NavbarM";
 
 function Login() {
+   const monitor = window.innerWidth < 840 && window.innerWidth > 576;
+
    return (
       <>
          <NavbarM />
@@ -13,22 +15,22 @@ function Login() {
                <Col lg={6} className=" text-center">
                   <img src={lplc} alt="" className="w-50 mb-4 mb-lg-none" />
                </Col>
-               <Col lg={6}>
+               <Col lg={5}>
                   <h2>
                      Belanja Kebutuhan Utama <br />
                      menjadi lebih mudah
                   </h2>
                   <Form action="" className="mt-3">
-                     <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 w-75">
-                        <Form.Control type="email" placeholder="name@example.com" />
+                     <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 ">
+                        <Form.Control type="email" placeholder="name@example.com" autoComplete="off" />
                      </FloatingLabel>
-                     <FloatingLabel controlId="floatingPassword" label="Password" className="w-75">
-                        <Form.Control type="password" placeholder="Password" />
+                     <FloatingLabel controlId="floatingPassword" label="Password" className="">
+                        <Form.Control type="password" placeholder="Password" autoComplete="off" />
                      </FloatingLabel>
-                     <a href="/dashboard" className="btn btn-success btn-block w-75 mt-4">
+                     <a href="/dashboard" className={monitor ? "btn btn-lg btn-success btn-block w-100 mt-4" : "btn btn-success btn-block w-100 mt-4"}>
                         Sign In to My Account
                      </a>
-                     <a href="/register" className="btn btn-secondary btn-block w-75 mt-2">
+                     <a href="/register" className={monitor ? "btn btn-lg btn-secondary btn-block w-100 mt-2" : "btn btn-secondary btn-block w-100 mt-2"}>
                         Sign Up
                      </a>
                   </Form>
