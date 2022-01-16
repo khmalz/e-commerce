@@ -95,7 +95,7 @@ const DashTransactions = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home">
+                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div>
                            <h5 className="dashboard-title fw-bold">Transactions</h5>

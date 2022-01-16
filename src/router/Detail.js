@@ -28,6 +28,10 @@ const Detail = () => {
       }
    };
 
+   const dashClick = (e) => {
+      e.target.classList.toggle("text-decoration-underline");
+   };
+
    return (
       <>
          <NavbarM />
@@ -40,7 +44,7 @@ const Detail = () => {
                   <nav aria-label="breadcrumb">
                      <ol className="breadcrumb">
                         <li className="breadcrumb-item">
-                           <a href="/" className="text-secondary lh-lg  text-decoration-none" style={{ fontSize: "1.1rem" }}>
+                           <a href="/" className="text-secondary lh-lg  text-decoration-none" onMouseOver={dashClick} onMouseOut={dashClick} style={{ fontSize: "1.1rem" }}>
                               Home
                            </a>
                         </li>
@@ -87,7 +91,7 @@ const Detail = () => {
                      By Tortilas
                   </div>
                   <div style={{ color: "#ff7158", fontSize: "1.2rem" }} className="fw-bold">
-                     Rp. 1.000.000
+                     $113,3
                   </div>
                </Col>
                <Col lg={2} className="ms-0 ms-lg-1 mt-3">
@@ -119,21 +123,21 @@ const Detail = () => {
                      <li className="d-flex mt-4 mb-1">
                         <img src={cr1} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
-                           <h6 className="fw-bold mt-2">Rayya</h6>
+                           <h6 className="fw-bold mt-2">Anindira</h6>
                            <p className="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque magnam possimus iusto harum quasi quis, vero laboriosam molestias dolore!</p>
                         </div>
                      </li>
                      <li className="d-flex mb-1">
                         <img src={cr2} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
-                           <h6 className="fw-bold mt-2">Reza</h6>
+                           <h6 className="fw-bold mt-2">Leroy</h6>
                            <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat assumenda excepturi eos. Temporibus consectetur tempore totam ex praesentium assumenda fuga repellendus?</p>
                         </div>
                      </li>
                      <li className="d-flex mb-1">
                         <img src={cr3} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
-                           <h6 className="fw-bold mt-2">Ina</h6>
+                           <h6 className="fw-bold mt-2">Divya</h6>
                            <p className="text-justify">
                               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, dignissimos illum exercitationem sapiente sequi voluptatum delectus iure minima necessitatibus ex nobis doloribus ut mollitia minus repudiandae, eaque in
                               fugit.

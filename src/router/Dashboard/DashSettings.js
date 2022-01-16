@@ -91,7 +91,7 @@ const DashSettings = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home">
+                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div>
                            <h5 className="dashboard-title fw-bold">Store Settings</h5>
@@ -130,7 +130,7 @@ const DashSettings = () => {
                                                    <Col className="text-start">
                                                       <input type="radio" name="flexRadioDefault" />
                                                       <label className="custom-control-label me-3 ms-1">Buka</label>
-                                                      <input type="radio" className="ms-2 me-1" name="flexRadioDefault" />
+                                                      <input type="radio" className="ms-2 me-1 " name="flexRadioDefault" />
                                                       <label className="custom-control-label">Sementara Tutup</label>
                                                    </Col>
                                                 </Row>

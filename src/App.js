@@ -13,6 +13,8 @@ import Cart from "./router/Cart";
 import Dashboard from "./router/Dashboard/Dashboard";
 import DashTransactions from "./router/Dashboard/DashTransactions";
 import DashSettings from "./router/Dashboard/DashSettings";
+import SuccessCheck from "./router/SuccessCheck";
+import DashAcc from "./router/Dashboard/DashAcc";
 
 const App = () => {
    return (
@@ -25,9 +27,11 @@ const App = () => {
                <Route path="/login" component={Login} />
                <Route path="/detail" component={Detail} />
                <Route path="/cart" component={Cart} />
+               <Route path="/success" component={SuccessCheck} />
                <Route path="/dashboard" component={Dashboard} />
                <Route path="/dashboard-transactions" component={DashTransactions} />
                <Route path="/dashboard-settings" component={DashSettings} />
+               <Route path="/dashboard-account" component={DashAcc} />
                <Route path="/nofound" component={Nofound} />
 
                <Redirect to="/nofound" />

@@ -102,7 +102,7 @@ const Dashboard = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home">
+                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div className="fw-bold">
                            <h2>Dashboard</h2>
@@ -176,7 +176,7 @@ const Dashboard = () => {
                                     </a>
                                  </Card>
 
-                                 <Card className="border-0 card-list" style={{ marginBottom: "700px" }}>
+                                 <Card className="border-0 card-list">
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
                                        <Card.Body>
                                           <Row className="fw-bold">

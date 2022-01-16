@@ -357,4 +357,21 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+.page-success .row-login {
+  min-height: 75vh;
+}
+
+.page-success .section-success h2 {
+  font-size: 28px;
+  font-weight: 200;
+  color: #0c0d36;
+  margin-top: 0;
+}
+
+.page-success .section-success .btn-signup {
+  background-color: #f3f3f3;
+  border-color: transparent;
+  color: #212529;
+}
 /*# sourceMappingURL=main.css.map */

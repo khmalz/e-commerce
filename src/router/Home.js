@@ -171,7 +171,7 @@ function Home() {
                      <img src={p6} className="card-img-top" alt="..." />
                      <div className="card-body">
                         <h5 className="card-title text-dark">Camera</h5>
-                        <p className="card-text text-harga fw-bold">$262,15</p>
+                        <p className="card-text text-harga fw-bold">$175</p>
                      </div>
                   </a>
                </Col>
