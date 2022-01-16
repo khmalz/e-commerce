@@ -11,6 +11,8 @@ function Register() {
       <div>
          <NavbarM />
 
+         {/* ---------------------------------------------------------------------------------------------- | Form Sign Up | --------------------------------------------------------------------------------------------------  */}
+
          <Container className="mt-5 pt-5" style={{ height: "800px" }}>
             <Row className="align-items-center justify-content-center">
                <Col lg={4}>
@@ -29,6 +31,9 @@ function Register() {
                         <Form.Control type="password" placeholder="Password" autoComplete="off" />
                      </FloatingLabel>
                      <hr />
+
+                     {/* -------------------------------------------------------------------------------- | Form Make New Shop | -------------------------------------------------------------------------------------------------  */}
+
                      <div className="form-group mt-3">
                         <label>Store</label>
                         <p className="text-muted">Apakah anda juga ingin membuka toko?</p>
