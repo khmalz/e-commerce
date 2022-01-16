@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
 import us from "../../images/user.jpg";
@@ -10,6 +10,8 @@ import dip3 from "../../images/dashboard-icon-product3.png";
 const DashTransactions = () => {
    const [aktif, setAktif] = useState(false);
    const monitor = window.innerWidth < 800;
+   const monitorK = window.innerWidth < 500;
+   const [stic, setStic] = useState("200px");
 
    const dashClick = () => {
       const wrap = document.querySelector("#wrapper");
@@ -17,13 +19,19 @@ const DashTransactions = () => {
       wrap.classList.toggle("toggled");
    };
 
+   useEffect(() => {
+      if (monitorK) {
+         setStic("0");
+      }
+   }, [monitorK]);
+
    return (
       <>
-         <div className="page-dashboard overflow-hidden" style={monitor ? { marginTop: "-20px" } : null}>
+         <div className="page-dashboard overflow-hidden" style={monitor ? { marginTop: "-35px" } : null}>
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
-               <div id="page-content-wrapper">
+               <div id="page-content-wrapper" style={{ marginLeft: stic }}>
                   <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">

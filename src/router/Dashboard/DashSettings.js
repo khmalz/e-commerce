@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, FloatingLabel, Form, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
 import us from "../../images/user.jpg";
@@ -6,6 +6,14 @@ import ic from "../../images/icon_cart.svg";
 
 const DashSettings = () => {
    const [aktif, setAktif] = useState(false);
+   const [stic, setStic] = useState("200px");
+   const monitorK = window.innerWidth < 500;
+
+   useEffect(() => {
+      if (monitorK) {
+         setStic("0");
+      }
+   }, [monitorK]);
 
    const dashClick = () => {
       const wrap = document.querySelector("#wrapper");
@@ -19,7 +27,7 @@ const DashSettings = () => {
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
-               <div id="page-content-wrapper">
+               <div id="page-content-wrapper" style={{ marginLeft: stic }}>
                   <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">

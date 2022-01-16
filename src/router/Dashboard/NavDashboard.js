@@ -11,7 +11,7 @@ const NavDashboard = () => {
    return (
       <>
          <div>
-            <div className="border-end" id="sidebar-wrapper">
+            <div className="border-end sidenav h-100 bg-light" id="sidebar-wrapper">
                <div className="text-center">
                   <img src={dsl} alt="" className={monitor ? "mt-5 mb-2" : "mt-4 mb-2"} />
                </div>

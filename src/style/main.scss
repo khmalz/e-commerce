@@ -252,7 +252,7 @@ body {
 }
 
 .page-dashboard #sidebar-wrapper {
-   margin-top: 60px;
+   margin-top: 75px;
    min-height: 100vh;
    margin-left: -15rem;
    -webkit-transition: margin 0.25s ease-out;
@@ -265,7 +265,7 @@ body {
 }
 
 .page-dashboard #sidebar-wrapper .list-group {
-   width: 15rem;
+   width: 13rem;
 }
 
 .page-dashboard #wrapper.toggled #sidebar-wrapper {
@@ -289,13 +289,14 @@ body {
 
 .page-dashboard .list-group-item {
    border: 0;
+   padding-right: 0;
    font-size: 16px;
    color: #c5c5c5;
 }
 
 .page-dashboard .list-group-item.active {
-   background: -webkit-gradient(linear, right top, left top, color-stop(2%, rgba(255, 113, 88, 0.32)), to(rgba(255, 255, 255, 0)));
-   background: linear-gradient(270deg, rgba(255, 113, 88, 0.32) 2%, rgba(255, 255, 255, 0) 100%);
+   background: -webkit-gradient(linear, right top, left top, color-stop(5%, rgba(255, 113, 88, 0.32)), to(rgba(255, 255, 255, 0)));
+   background: linear-gradient(270deg, rgba(255, 113, 88, 0.32) 5%, rgba(255, 255, 255, 0) 100%);
    border-right: 4px solid #ff7158;
    color: #0c0d36;
 }
@@ -341,12 +342,6 @@ body {
    padding-top: 15px;
 }
 
-@media (max-width: 991.98px) {
-   .navbar-store {
-      background-color: #fff !important;
-   }
-}
-
 @media (min-width: 992px) {
    .navbar-store .nav-item .nav-link {
       margin-left: 10px;
@@ -374,6 +369,9 @@ body {
    background-color: #fff !important;
    -webkit-transition: background-color 200ms linear;
    transition: background-color 200ms linear;
+   -moz-transition: background-color 200ms linear;
+   -ms-transition: background-color 200ms linear;
+   -o-transition: background-color 200ms linear;
 }
 
 .card .dashboard-card-title {
@@ -403,4 +401,13 @@ body {
    font-size: 18px;
    line-height: 27px;
    color: #0c0d36;
+}
+
+.sidenav {
+   position: fixed;
+   z-index: 1111;
+   // top: 0;
+   left: 0;
+   overflow-x: hidden;
+   overflow-y: hidden;
 }

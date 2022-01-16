@@ -8,10 +8,13 @@ import dip3 from "../../images/dashboard-icon-product3.png";
 import dar from "../../images/dashboard-arrow-right.svg";
 import { Button, Card, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
+import { useEffect } from "react";
 
 const Dashboard = () => {
    const [aktif, setAktif] = useState(false);
-   const monitor = window.innerWidth < 800;
+   const [stic, setStic] = useState("200px");
+   const monitor = window.innerWidth < 765;
+   const monitorK = window.innerWidth < 500;
 
    const dashClick = () => {
       const wrap = document.querySelector("#wrapper");
@@ -19,16 +22,22 @@ const Dashboard = () => {
       wrap.classList.toggle("toggled");
    };
 
+   useEffect(() => {
+      if (monitorK) {
+         setStic("0");
+      }
+   }, [monitorK]);
+
    return (
       <>
          {/* ---------------------------------------------------------------------------------------------- | Dashboard | --------------------------------------------------------------------------------------------------  */}
 
-         <div className="page-dashboard overflow-hidden" style={monitor ? { marginTop: "-25px" } : null}>
+         <div className="page-dashboard" style={monitor ? { marginTop: "-25px" } : null}>
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
-               <div id="page-content-wrapper">
-                  <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
+               <div id="page-content-wrapper" style={{ marginLeft: stic }}>
+                  <Navbar expand="lg" fixed="top" className="navbar-store navbar-fixed-top">
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">
                            Menu
@@ -37,8 +46,8 @@ const Dashboard = () => {
                            <span className="navbar-toggle-icon"></span>
                         </Button>
 
-                        <Navbar.Collapse id="navbarSupportedContent">
-                           <ul className="navbar-nav d-none d-lg-flex ms-auto">
+                        <Navbar className="collapse" id="navbarSupportedContent">
+                           <ul className="navbar-nav d-none d-md-flex ms-auto">
                               <li class="nav-item dropdown">
                                  <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
@@ -68,14 +77,16 @@ const Dashboard = () => {
                                  </ul>
                               </li>
                               <li className="nav-item">
-                                 <a href="#a" className="nav-link d-line-block mt-2">
+                                 <a href="#a" className="nav-link d-inline-block mt-2">
                                     <img src={ic} alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
                               </li>
                            </ul>
 
-                           <ul className="navbar-nav d-block d-lg-none">
+                           {/* For Mobile */}
+
+                           <ul className="navbar-nav d-block d-lg-none ms-auto">
                               <li className="nav-item">
                                  <a href="#a" className="nav-link">
                                     Hallo, Akmal
@@ -87,7 +98,7 @@ const Dashboard = () => {
                                  </a>
                               </li>
                            </ul>
-                        </Navbar.Collapse>
+                        </Navbar>
                      </Container>
                   </Navbar>
 
@@ -165,7 +176,7 @@ const Dashboard = () => {
                                     </a>
                                  </Card>
 
-                                 <Card className="border-0 card-list" style={{ marginBottom: "70px" }}>
+                                 <Card className="border-0 card-list" style={{ marginBottom: "700px" }}>
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
                                        <Card.Body>
                                           <Row className="fw-bold">
