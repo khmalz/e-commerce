@@ -11,6 +11,7 @@ import NavDashboard from "./NavDashboard";
 
 const Dashboard = () => {
    const [aktif, setAktif] = useState(false);
+   const monitor = window.innerWidth < 800;
 
    const dashClick = () => {
       const wrap = document.querySelector("#wrapper");
@@ -22,7 +23,7 @@ const Dashboard = () => {
       <>
          {/* ---------------------------------------------------------------------------------------------- | Dashboard | --------------------------------------------------------------------------------------------------  */}
 
-         <div className="page-dashboard">
+         <div className="page-dashboard overflow-hidden" style={monitor ? { marginTop: "-25px" } : null}>
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
@@ -164,7 +165,7 @@ const Dashboard = () => {
                                     </a>
                                  </Card>
 
-                                 <Card className="border-0 card-list">
+                                 <Card className="border-0 card-list" style={{ marginBottom: "70px" }}>
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
                                        <Card.Body>
                                           <Row className="fw-bold">

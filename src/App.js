@@ -11,6 +11,8 @@ import Detail from "./router/Detail";
 import Nofound from "./router/Nofound";
 import Cart from "./router/Cart";
 import Dashboard from "./router/Dashboard/Dashboard";
+import DashTransactions from "./router/Dashboard/DashTransactions";
+import DashSettings from "./router/Dashboard/DashSettings";
 
 const App = () => {
    return (
@@ -24,6 +26,8 @@ const App = () => {
                <Route path="/detail" component={Detail} />
                <Route path="/cart" component={Cart} />
                <Route path="/dashboard" component={Dashboard} />
+               <Route path="/dashboard-transactions" component={DashTransactions} />
+               <Route path="/dashboard-settings" component={DashSettings} />
                <Route path="/nofound" component={Nofound} />
 
                <Redirect to="/nofound" />
