@@ -10,6 +10,7 @@ import Login from "./router/Login";
 import Detail from "./router/Detail";
 import Nofound from "./router/Nofound";
 import Cart from "./router/Cart";
+import Dashboard from "./router/Dashboard/Dashboard";
 
 const App = () => {
    return (
@@ -22,6 +23,7 @@ const App = () => {
                <Route path="/login" component={Login} />
                <Route path="/detail" component={Detail} />
                <Route path="/cart" component={Cart} />
+               <Route path="/dashboard" component={Dashboard} />
                <Route path="/nofound" component={Nofound} />
 
                <Redirect to="/nofound" />

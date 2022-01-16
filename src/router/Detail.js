@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import pd1 from "../images/product-detail-1.jpg";
 import pd2 from "../images/product-detail-2.jpg";
@@ -29,14 +28,6 @@ const Detail = () => {
       }
    };
 
-   useEffect(() => {
-      window.addEventListener("click", imgClick);
-
-      return () => {
-         window.removeEventListener("click", imgClick);
-      };
-   }, []);
-
    return (
       <>
          <NavbarM />
@@ -64,7 +55,7 @@ const Detail = () => {
 
          {/* ------------------------------------------------------------------------------------------- | Images | ------------------------------------------------------------------------------------------------- */}
 
-         <Container className="container-img">
+         <Container className="container-img" onClick={imgClick}>
             <Row>
                <Col lg={7}>
                   <img src={pd1} className="w-100 h-100 jumbo" alt="" />
