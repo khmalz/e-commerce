@@ -37,7 +37,7 @@ const Dashboard = () => {
                <NavDashboard />
 
                <div id="page-content-wrapper" style={{ marginLeft: stic }}>
-                  <Navbar expand="lg" fixed="top" className="navbar-store navbar-fixed-top">
+                  <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">
                            Menu
@@ -46,8 +46,8 @@ const Dashboard = () => {
                            <span className="navbar-toggle-icon"></span>
                         </Button>
 
-                        <Navbar className="collapse" id="navbarSupportedContent">
-                           <ul className="navbar-nav d-none d-md-flex ms-auto">
+                        <Navbar.Collapse id="navbarSupportedContent">
+                           <ul className="navbar-nav d-none d-lg-flex ms-auto">
                               <li class="nav-item dropdown">
                                  <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
@@ -77,16 +77,14 @@ const Dashboard = () => {
                                  </ul>
                               </li>
                               <li className="nav-item">
-                                 <a href="#a" className="nav-link d-inline-block mt-2">
+                                 <a href="#a" className="nav-link d-line-block mt-2">
                                     <img src={ic} alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
                               </li>
                            </ul>
 
-                           {/* For Mobile */}
-
-                           <ul className="navbar-nav d-block d-lg-none ms-auto">
+                           <ul className="navbar-nav d-block d-lg-none">
                               <li className="nav-item">
                                  <a href="#a" className="nav-link">
                                     Hallo, Akmal
@@ -98,7 +96,7 @@ const Dashboard = () => {
                                  </a>
                               </li>
                            </ul>
-                        </Navbar>
+                        </Navbar.Collapse>
                      </Container>
                   </Navbar>
 
