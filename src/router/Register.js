@@ -62,7 +62,7 @@ function Register() {
 
                      {checked ? (
                         <>
-                           <FloatingLabel controlId="floatingText" label="Store Name" className="mb-3 mt-2">
+                           <FloatingLabel controlId="floatingText" label="Store Name" className="mb-3 mt-3">
                               <Form.Control type="text" placeholder="example" autoComplete="off" />
                            </FloatingLabel>
                            <FloatingLabel controlId="floatingSelect" label="Kategori" className="my-2">
@@ -81,14 +81,14 @@ function Register() {
                      )}
 
                      <Row className=" mt-2">
-                        <Button className="btn btn-success mt-4">
+                        <Button variant="success" className="mt-2">
                            <Link to="/login" className="text-decoration-none text-white">
                               Sign Up Now
                            </Link>
                         </Button>
-                        <Button className="btn btn-secondary mt-1">
+                        <Button variant="secondary" className="mt-1">
                            <Link to="/login" className="text-decoration-none text-white">
-                              Back Sign Up
+                              Back Sign In
                            </Link>
                         </Button>
                      </Row>

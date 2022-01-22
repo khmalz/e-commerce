@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Col, Container, FloatingLabel, Form, Nav, Navbar, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
 import us from "../../images/user.jpg";
 import ic from "../../images/icon_cart.svg";
+import pdd from "../../images/product-detail-dashboard.png";
 
-const DashSettings = () => {
+const DashTransDetail = () => {
    const [aktif, setAktif] = useState(false);
    const [stic, setStic] = useState("200px");
    const monitorK = window.innerWidth < 500;
@@ -94,59 +95,63 @@ const DashSettings = () => {
                   <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div>
-                           <h5 className="fw-bold fs-5">Store Settings</h5>
-                           <p className="dashboard-title fs-6">Make store that profitable</p>
+                           <h5 className="fw-bold fs-5">#STORE10814</h5>
+                           {/* ----------------------------------------------------------------------------------------- | BreadCrumb | ------------------------------------------------------------------------------------------------- */}
+
+                           <Row>
+                              <Col>
+                                 <nav aria-label="breadcrumb">
+                                    <ol className="breadcrumb">
+                                       <li className="breadcrumb-item">
+                                          <a href="/" className="text-secondary lh-lg text-decoration-none" onMouseOver={dashClick} onMouseOut={dashClick}>
+                                             Home
+                                          </a>
+                                       </li>
+                                       <li className="breadcrumb-item lh-lg fw-bold">Cart</li>
+                                    </ol>
+                                 </nav>
+                              </Col>
+                           </Row>
                         </div>
+
                         <Row>
                            <Col>
                               <Form>
-                                 <Card>
-                                    <Card.Body>
-                                       <Row>
-                                          <Col md={6}>
-                                             <FloatingLabel controlId="floatingText" label="Store Name" className="mb-3">
-                                                <Form.Control type="text" placeholder="example" autoComplete="off" />
-                                             </FloatingLabel>
-                                          </Col>
-                                          <Col md={6}>
-                                             <FloatingLabel controlId="floatingSelect" label="Kategori">
-                                                <Form.Select aria-label="Floating label select example">
-                                                   <option selected disabled>
-                                                      Pilih Kategori
-                                                   </option>
-                                                   <option value="1">Satu</option>
-                                                   <option value="2">Dua</option>
-                                                   <option value="3">Tiga</option>
-                                                </Form.Select>
-                                             </FloatingLabel>
-                                          </Col>
-                                       </Row>
-                                       <Row>
-                                          <Col md={6}>
-                                             <Form.Group>
-                                                <label>Store</label>
-                                                <p className="text-muted mt-2">Apakah anda juga ingin membuka toko?</p>
-                                                <Row>
-                                                   <Col className="text-start">
-                                                      <input type="radio" name="flexRadioDefault" />
-                                                      <label className="custom-control-label me-3 ms-1">Buka</label>
-                                                      <input type="radio" className="ms-2 me-1 " name="flexRadioDefault" />
-                                                      <label className="custom-control-label">Sementara Tutup</label>
-                                                   </Col>
-                                                </Row>
-                                             </Form.Group>
-                                          </Col>
-                                       </Row>
-
-                                       <Row>
-                                          <Col className="text-end">
-                                             <button type="submit" className="btn btn-success px-5">
-                                                Save Now
-                                             </button>
-                                          </Col>
-                                       </Row>
-                                    </Card.Body>
-                                 </Card>
+                                 <div class="card flex-row p-2 pt-3">
+                                    <div class="card-header border-0">
+                                       <img src={pdd} alt="images" />
+                                    </div>
+                                    <div class="px-2 ms-3 me-5">
+                                       <Col>
+                                          <p class="dashboard-title m-0">Customer Name</p>
+                                          <h5 class="fs-6 fw-bold">Arz</h5>
+                                       </Col>
+                                       <Col>
+                                          <p class="dashboard-title m-0">Date of Transaction</p>
+                                          <h5 class="fs-6 fw-bold">5 Oktober, 2021</h5>
+                                       </Col>
+                                       <Col>
+                                          <p class="dashboard-title m-0">Total Amount</p>
+                                          <h5 class="fs-6 fw-bold">$45,184</h5>
+                                       </Col>
+                                    </div>
+                                    <div class="px-2 ms-5">
+                                       <Col>
+                                          <p class="dashboard-title m-0">Product Name</p>
+                                          <h5 class="fs-6 fw-bold">DW Watch</h5>
+                                       </Col>
+                                       <Col>
+                                          <p class="dashboard-title m-0">Status</p>
+                                          <h5 class="fs-6 fw-bold" style={{ color: "#F32355" }}>
+                                             Pending
+                                          </h5>
+                                       </Col>
+                                       <Col>
+                                          <p class="dashboard-title m-0">Mobile</p>
+                                          <h5 class="fs-6 fw-bold">+62 858-3106-7841</h5>
+                                       </Col>
+                                    </div>
+                                 </div>
                               </Form>
                            </Col>
                         </Row>
@@ -159,4 +164,4 @@ const DashSettings = () => {
    );
 };
 
-export default DashSettings;
+export default DashTransDetail;

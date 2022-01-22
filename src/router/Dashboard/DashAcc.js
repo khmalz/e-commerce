@@ -139,8 +139,8 @@ const DashAcc = () => {
                   <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div>
-                           <h5 className="dashboard-title fw-bold">My Account</h5>
-                           <p className="dashboard-subtitle fw-bold fs-6">Update Your Current Profile</p>
+                           <h5 className="fw-bold fs-5">My Account</h5>
+                           <p className="dashboard-title fs-6">Update Your Current Profile</p>
                         </div>
 
                         <Row>

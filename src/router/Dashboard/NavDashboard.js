@@ -8,6 +8,8 @@ const NavDashboard = () => {
       e.target.classList.toggle("text-decoration-underline");
    };
 
+   const lokasih = window.location.pathname === "/dashboard-transactions-details";
+
    return (
       <>
          <div>
@@ -17,32 +19,32 @@ const NavDashboard = () => {
                </div>
                <ul className="list-group list-group-flush">
                   <li className="list-group-item">
-                     <NavLink exact activeClassName="active" to="/dashboard" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                     <NavLink exact to="/dashboard" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         Dashboard
                      </NavLink>
                   </li>
-                  <li class="list-group-item">
-                     <NavLink exact activeClassName="active" to="/dashboard-product" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <li className="list-group-item">
+                     <NavLink exact to="/dashboard-product" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         My Product
                      </NavLink>
                   </li>
-                  <li class="list-group-item">
-                     <NavLink exact activeClassName="active" to="/dashboard-transactions" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <li className="list-group-item">
+                     <NavLink exact to="/dashboard-transactions" className={lokasih ? "list-group-item active" : "list-group-item"} onMouseOver={dashClick} onMouseOut={dashClick}>
                         Transactions
                      </NavLink>
                   </li>
-                  <li class="list-group-item">
-                     <NavLink exact activeClassName="active" to="/dashboard-settings" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <li className="list-group-item">
+                     <NavLink exact to="/dashboard-settings" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         Settings
                      </NavLink>
                   </li>
-                  <li class="list-group-item">
-                     <NavLink exact activeClassName="active" to="/dashboard-account" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <li className="list-group-item">
+                     <NavLink exact to="/dashboard-account" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         Account
                      </NavLink>
                   </li>
-                  <li class="list-group-item">
-                     <NavLink exact activeClassName="active" to="/" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <li className="list-group-item">
+                     <NavLink exact to="/" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         Sign Out
                      </NavLink>
                   </li>

@@ -277,7 +277,7 @@ body {
 
 .page-dashboard .section-content .dashboard-title {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 0.9rem !important;
   color: #9191a9;
 }
 

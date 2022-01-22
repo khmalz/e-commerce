@@ -103,8 +103,8 @@ const Dashboard = () => {
                   <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div className="fw-bold">
-                           <h2>Dashboard</h2>
-                           <p>Look what you made today</p>
+                           <h5 className="fw-bold fs-5">Dashboard</h5>
+                           <p className="dashboard-title fs-6">Look what you made today</p>
                         </div>
                         <div>
                            <Row>

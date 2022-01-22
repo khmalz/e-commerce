@@ -6,6 +6,7 @@ import ic from "../../images/icon_cart.svg";
 import dip1 from "../../images/dashboard-icon-product1.png";
 import dip2 from "../../images/dashboard-icon-product2.png";
 import dip3 from "../../images/dashboard-icon-product3.png";
+import dpc4 from "../../images/product-card-4.png";
 
 const DashTransactions = () => {
    const [aktif, setAktif] = useState(false);
@@ -98,8 +99,8 @@ const DashTransactions = () => {
                   <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
                      <Container fluid>
                         <div>
-                           <h5 className="dashboard-title fw-bold">Transactions</h5>
-                           <p className="dashboard-subtitle fw-bold fs-6">Big result start form the small one</p>
+                           <h5 className="fw-bold fs-5">Transactions</h5>
+                           <p className="dashboard-title fs-6">Big result start form the small one</p>
                         </div>
                         <Nav variant="pills" defaultActiveKey="#">
                            <Nav.Item>
@@ -125,7 +126,7 @@ const DashTransactions = () => {
                                                    <img src={dip1} alt="" />
                                                 </Col>
                                                 <Col md={4}>Dw Watch</Col>
-                                                <Col md={3}>Reza</Col>
+                                                <Col md={3}>Leroy</Col>
                                                 <Col md={3}>5 Oktober, 2021</Col>
                                              </Row>
                                           </Card.Body>
@@ -140,7 +141,7 @@ const DashTransactions = () => {
                                                    <img src={dip2} alt="" />
                                                 </Col>
                                                 <Col md={4}>Parfume</Col>
-                                                <Col md={3}>Ina</Col>
+                                                <Col md={3}>Divya</Col>
                                                 <Col md={3}>19 November, 2021</Col>
                                              </Row>
                                           </Card.Body>
@@ -155,7 +156,7 @@ const DashTransactions = () => {
                                                    <img src={dip3} alt="" />
                                                 </Col>
                                                 <Col md={4}>YSL Sing Bag</Col>
-                                                <Col md={3}>Rayya</Col>
+                                                <Col md={3}>Anindira</Col>
                                                 <Col md={3}>3 Januari, 2022</Col>
                                              </Row>
                                           </Card.Body>
@@ -172,10 +173,10 @@ const DashTransactions = () => {
                                           <Card.Body>
                                              <Row className="fw-bold">
                                                 <Col md={1}>
-                                                   <img src={dip1} alt="" />
+                                                   <img src={dpc4} width="45  " height="45  " alt="" />
                                                 </Col>
-                                                <Col md={4}>Dw Watch</Col>
-                                                <Col md={3}>Reza</Col>
+                                                <Col md={4}>Macbook</Col>
+                                                <Col md={3}>Anindira</Col>
                                                 <Col md={3}>5 Oktober, 2021</Col>
                                              </Row>
                                           </Card.Body>
