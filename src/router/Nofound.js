@@ -1,7 +1,9 @@
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Nofound = () => {
+   let history = useHistory();
+
    return (
       <div>
          <div class="containerno">
@@ -43,10 +45,8 @@ const Nofound = () => {
                   </g>
                </g>
             </svg>
-            <Button variant="info" className="me-md-0 me-4 d-block d-md-inline-block">
-               <Link to="/" className="text-decoration-none text-white">
-                  Return to Home
-               </Link>
+            <Button onClick={() => history.goBack()} variant="info" className="me-md-0 me-4 d-block d-md-inline-block  text-white">
+               Go Back
             </Button>
          </div>
       </div>

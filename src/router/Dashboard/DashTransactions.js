@@ -101,65 +101,90 @@ const DashTransactions = () => {
                            <h5 className="dashboard-title fw-bold">Transactions</h5>
                            <p className="dashboard-subtitle fw-bold fs-6">Big result start form the small one</p>
                         </div>
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" defaultActiveKey="#">
                            <Nav.Item>
-                              <Nav.Link href="#pils" className="active">
+                              <Nav.Link href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                                  Sell Product
                               </Nav.Link>
                            </Nav.Item>
                            <Nav.Item>
-                              <Nav.Link>Buy Product</Nav.Link>
+                              <Nav.Link id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" eventKey="link-1">
+                                 Buy Product
+                              </Nav.Link>
                            </Nav.Item>
                         </Nav>
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <Row className="mt-3">
+                                 <Col className="col-12 mt-2">
+                                    <Card className="border-0 card-list">
+                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                          <Card.Body>
+                                             <Row className="fw-bold">
+                                                <Col md={1}>
+                                                   <img src={dip1} alt="" />
+                                                </Col>
+                                                <Col md={4}>Dw Watch</Col>
+                                                <Col md={3}>Reza</Col>
+                                                <Col md={3}>5 Oktober, 2021</Col>
+                                             </Row>
+                                          </Card.Body>
+                                       </a>
+                                    </Card>
 
-                        <Row className="mt-3">
-                           <Col className="col-12 mt-2">
-                              <Card className="border-0 card-list">
-                                 <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                    <Card.Body>
-                                       <Row className="fw-bold">
-                                          <Col md={1}>
-                                             <img src={dip1} alt="" />
-                                          </Col>
-                                          <Col md={4}>Dw Watch</Col>
-                                          <Col md={3}>Reza</Col>
-                                          <Col md={3}>5 Oktober, 2021</Col>
-                                       </Row>
-                                    </Card.Body>
-                                 </a>
-                              </Card>
+                                    <Card className="border-0 card-list">
+                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                          <Card.Body>
+                                             <Row className="fw-bold">
+                                                <Col md={1}>
+                                                   <img src={dip2} alt="" />
+                                                </Col>
+                                                <Col md={4}>Parfume</Col>
+                                                <Col md={3}>Ina</Col>
+                                                <Col md={3}>19 November, 2021</Col>
+                                             </Row>
+                                          </Card.Body>
+                                       </a>
+                                    </Card>
 
-                              <Card className="border-0 card-list">
-                                 <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                    <Card.Body>
-                                       <Row className="fw-bold">
-                                          <Col md={1}>
-                                             <img src={dip2} alt="" />
-                                          </Col>
-                                          <Col md={4}>Parfume</Col>
-                                          <Col md={3}>Ina</Col>
-                                          <Col md={3}>19 November, 2021</Col>
-                                       </Row>
-                                    </Card.Body>
-                                 </a>
-                              </Card>
-
-                              <Card className="border-0 card-list" style={{ marginBottom: "100px" }}>
-                                 <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                    <Card.Body>
-                                       <Row className="fw-bold">
-                                          <Col md={1}>
-                                             <img src={dip3} alt="" />
-                                          </Col>
-                                          <Col md={4}>YSL Sing Bag</Col>
-                                          <Col md={3}>Rayya</Col>
-                                          <Col md={3}>3 Januari, 2022</Col>
-                                       </Row>
-                                    </Card.Body>
-                                 </a>
-                              </Card>
-                           </Col>
-                        </Row>
+                                    <Card className="border-0 card-list" style={{ marginBottom: "100px" }}>
+                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                          <Card.Body>
+                                             <Row className="fw-bold">
+                                                <Col md={1}>
+                                                   <img src={dip3} alt="" />
+                                                </Col>
+                                                <Col md={4}>YSL Sing Bag</Col>
+                                                <Col md={3}>Rayya</Col>
+                                                <Col md={3}>3 Januari, 2022</Col>
+                                             </Row>
+                                          </Card.Body>
+                                       </a>
+                                    </Card>
+                                 </Col>
+                              </Row>
+                           </div>
+                           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                              <Row className="mt-3">
+                                 <Col className="col-12 mt-2">
+                                    <Card className="border-0 card-list">
+                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                          <Card.Body>
+                                             <Row className="fw-bold">
+                                                <Col md={1}>
+                                                   <img src={dip1} alt="" />
+                                                </Col>
+                                                <Col md={4}>Dw Watch</Col>
+                                                <Col md={3}>Reza</Col>
+                                                <Col md={3}>5 Oktober, 2021</Col>
+                                             </Row>
+                                          </Card.Body>
+                                       </a>
+                                    </Card>
+                                 </Col>
+                              </Row>
+                           </div>
+                        </div>
                      </Container>
                   </div>
                </div>
