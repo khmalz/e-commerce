@@ -3,7 +3,7 @@ import "./style/main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Home from "./router/Home";
-import Categories from "./router/Categories";
+// import Categories from "./router/Categories";
 import Register from "./router/Register";
 import Login from "./router/Login";
 import Detail from "./router/Detail";
@@ -22,9 +22,9 @@ const App = () => {
          <Router>
             <Switch>
                <Route path="/" exact component={Home} />
-               <Route path="/categories" component={Categories} />
                <Route path="/register" component={Register} />
                <Route path="/login" component={Login} />
+               <Route path="/categories" component={Detail} />
                <Route path="/detail" component={Detail} />
                <Route path="/cart" component={Cart} />
                <Route path="/success" component={SuccessCheck} />

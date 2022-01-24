@@ -23,7 +23,7 @@ const DashSettings = () => {
 
    return (
       <>
-         <div className="page-dashboard">
+         <div className="page-dashboard overflow-hidden">
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
@@ -46,26 +46,6 @@ const DashSettings = () => {
                                        Hallo, Akmal
                                     </span>
                                  </Nav.Link>
-                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                       <a href="/dashboard" className="dropdown-item fw-bold">
-                                          Dashboard
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="/dashboard-account" className="dropdown-item fw-bold">
-                                          Settings
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                       <a href="/" className="dropdown-item fw-bold">
-                                          Logout
-                                       </a>
-                                    </li>
-                                 </ul>
                               </li>
                               <li className="nav-item">
                                  <a href="#a" className="nav-link d-line-block mt-2">
@@ -100,7 +80,7 @@ const DashSettings = () => {
                         <Row>
                            <Col>
                               <Form>
-                                 <Card>
+                                 <Card style={monitorK ? { width: "95vw" } : { width: "83vw" }}>
                                     <Card.Body>
                                        <Row>
                                           <Col md={6}>
@@ -124,11 +104,11 @@ const DashSettings = () => {
                                        <Row>
                                           <Col md={6}>
                                              <Form.Group>
-                                                <label>Store</label>
+                                                <label className="mt-3 mt-lg-0">Store</label>
                                                 <p className="text-muted mt-2">Apakah anda juga ingin membuka toko?</p>
                                                 <Row>
                                                    <Col className="text-start">
-                                                      <input type="radio" name="flexRadioDefault" />
+                                                      <input type="radio" name="flexRadioDefault" checked />
                                                       <label className="custom-control-label me-3 ms-1">Buka</label>
                                                       <input type="radio" className="ms-2 me-1 " name="flexRadioDefault" />
                                                       <label className="custom-control-label">Sementara Tutup</label>

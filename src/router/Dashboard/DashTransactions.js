@@ -51,26 +51,6 @@ const DashTransactions = () => {
                                        Hallo, Akmal
                                     </span>
                                  </Nav.Link>
-                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                       <a href="/dashboard" className="dropdown-item fw-bold">
-                                          Dashboard
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="/dashboard-account" className="dropdown-item fw-bold">
-                                          Settings
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                       <a href="/" className="dropdown-item fw-bold">
-                                          Logout
-                                       </a>
-                                    </li>
-                                 </ul>
                               </li>
                               <li className="nav-item">
                                  <a href="#a" className="nav-link d-line-block mt-2">

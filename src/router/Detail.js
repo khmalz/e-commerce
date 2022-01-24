@@ -7,7 +7,10 @@ import pd4 from "../images/product-detail-4.jpg";
 import cr1 from "../images/customer-review-1.png";
 import cr2 from "../images/customer-review-2.png";
 import cr3 from "../images/customer-review-3.png";
-import NavbarM from "./NavbarM";
+import { Nav } from "react-bootstrap";
+import logo from "../images/logo.svg";
+import us from "../images/user.jpg";
+import icp from "../images/icon_cart_empty.svg";
 
 const Detail = () => {
    const imgClick = (e) => {
@@ -16,14 +19,15 @@ const Detail = () => {
 
       if (e.target.className === "thumb") {
          jumbo.src = e.target.src;
-         jumbo.classList.add("fade");
+         jumbo.classList.add("fade-out");
          setTimeout(() => {
-            jumbo.classList.remove("fade");
+            jumbo.classList.remove("fade-out");
          }, 400);
 
          thumbs.forEach((thumb) => {
             thumb.classList = "thumb";
          });
+
          e.target.classList.add("actived");
       }
    };
@@ -34,7 +38,50 @@ const Detail = () => {
 
    return (
       <>
-         <NavbarM />
+         <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
+            <div class="container">
+               <a class="navbar-brand" href="#j">
+                  <img src={logo} alt="Logo" />
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item ">
+                        <a href="/" class="nav-link">
+                           Home
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a href="/categories" class="nav-link activation">
+                           Categories
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="/rewards" class="nav-link">
+                           Rewards
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="navbar-nav d-none d-lg-flex">
+                     <li class="nav-item dropdown">
+                        <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <span className="fw-bold" style={{ fontSize: "1.05em" }}>
+                              Hallo, Akmal
+                           </span>
+                        </Nav.Link>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#a" class="nav-link d-inline-block mt-3">
+                           <img src={icp} alt="" />
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
 
          {/* ----------------------------------------------------------------------------------------- | BreadCrumb | ------------------------------------------------------------------------------------------------- */}
 

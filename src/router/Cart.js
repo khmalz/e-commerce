@@ -1,27 +1,29 @@
-import React from "react";
-import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
-import NavbarM from "./NavbarM";
+import React, { useState, useEffect } from "react";
+import { Button, Col, Container, Form, Nav, Row, Table } from "react-bootstrap";
 import pc1 from "../images/products-1.jpg";
 import pc2 from "../images/product-card-2.png";
 import pc3 from "../images/products-2.jpg";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.svg";
+import us from "../images/user.jpg";
+import ic from "../images/icon_cart.svg";
 
 const Cart = () => {
    const [input, setInput] = useState({ adres1: "Jln Halim Perdanakusuma", adres2: "Blok 3 No. 35", pCode: "17154", noPhone: "087984366758" });
-
-   const [city, setCity] = useState("Default");
-   const [westJ, setWestJ] = useState(false);
-   const [jakr, setJakr] = useState(false);
-   const [eastJ, setEastJ] = useState(false);
-   const [northS, setNorthS] = useState(false);
-   const [papua, setPapua] = useState(false);
 
    const Jakarta = ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"];
    const Jabar = ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"];
    const Jatim = ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"];
    const Sumut = ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"];
    const Papua = ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"];
+
+   const [city, setCity] = useState("Default");
+
+   const [westJ, setWestJ] = useState(false);
+   const [jakr, setJakr] = useState(false);
+   const [eastJ, setEastJ] = useState(false);
+   const [northS, setNorthS] = useState(false);
+   const [papua, setPapua] = useState(false);
 
    useEffect(() => {
       if (city === "JaBar") {
@@ -63,7 +65,51 @@ const Cart = () => {
 
    return (
       <div className="pt-5" style={{ height: "1000px" }}>
-         <NavbarM />
+         <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
+            <div class="container">
+               <a class="navbar-brand" href="#j">
+                  <img src={logo} alt="Logo" />
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item ">
+                        <a href="/" class="nav-link">
+                           Home
+                        </a>
+                     </li>
+                     <li class="nav-item ">
+                        <a href="/categories" class="nav-link activation">
+                           Categories
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="/rewards" class="nav-link">
+                           Rewards
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="navbar-nav d-none d-lg-flex">
+                     <li class="nav-item dropdown">
+                        <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <span className="fw-bold" style={{ fontSize: "1.05em" }}>
+                              Hallo, Akmal
+                           </span>
+                        </Nav.Link>
+                     </li>
+                     <li className="nav-item">
+                        <a href="#a" className="nav-link d-inline-block mt-2">
+                           <img src={ic} alt="" />
+                           <div className="cart-badge">3</div>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
 
          {/* ----------------------------------------------------------------------------------------- | BreadCrumb | ------------------------------------------------------------------------------------------------- */}
 
@@ -77,7 +123,7 @@ const Cart = () => {
                               Home
                            </a>
                         </li>
-                        <li className="breadcrumb-item text-dark lh-lg fw-bold" style={{ fontSize: "1.1rem" }}>
+                        <li className="breadcrumb-item text-dark lh-lg" style={{ fontSize: "1.1rem" }}>
                            Cart
                         </li>
                      </ol>
@@ -109,7 +155,7 @@ const Cart = () => {
                            </td>
                            <td>
                               <h6 className="lead ">$1.099</h6>
-                              <p className="text-secondary">Dolar</p>
+                              <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
                               <Button className="btn-danger">Remove</Button>
@@ -125,7 +171,7 @@ const Cart = () => {
                            </td>
                            <td>
                               <h6 className="lead ">$350</h6>
-                              <p className="text-secondary">Dolar</p>
+                              <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
                               <Button className="btn-danger">Remove</Button>
@@ -141,7 +187,7 @@ const Cart = () => {
                            </td>
                            <td>
                               <h6 className="lead ">$10,6</h6>
-                              <p className="text-secondary">Dolar</p>
+                              <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
                               <Button className="btn-danger">Remove</Button>
@@ -200,7 +246,7 @@ const Cart = () => {
                            <option disabled selected>
                               Select Your City
                            </option>
-                           <option disabled>Pilih Provinsi Dahulu</option>
+                           <option disabled>Choose Province First</option>
                         </>
                      ) : null}
                      {jakr ? (

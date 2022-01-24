@@ -22,7 +22,7 @@ const NavbarM = () => {
                         </NavLink>
                      </Nav.Link>
                      <Nav.Link className="me-4">
-                        <NavLink activeClassName="activation" className="text-decoration-none" style={{ color: "#848485" }} to="/categories">
+                        <NavLink activeClassName="activation" className="text-decoration-none" style={{ color: "#848485" }} to="/detail">
                            Categories
                         </NavLink>
                      </Nav.Link>

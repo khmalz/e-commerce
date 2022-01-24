@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import us from "../../images/user.jpg";
 import ic from "../../images/icon_cart.svg";
@@ -8,7 +8,6 @@ import dip3 from "../../images/dashboard-icon-product3.png";
 import dar from "../../images/dashboard-arrow-right.svg";
 import { Button, Card, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
-import { useEffect } from "react";
 
 const Dashboard = () => {
    const [aktif, setAktif] = useState(false);
@@ -32,7 +31,7 @@ const Dashboard = () => {
       <>
          {/* ---------------------------------------------------------------------------------------------- | Dashboard | --------------------------------------------------------------------------------------------------  */}
 
-         <div className="page-dashboard" style={monitor ? { marginTop: "-25px" } : null}>
+         <div className="page-dashboard overflow-hidden " style={monitor ? { marginTop: "-25px" } : null}>
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
@@ -55,29 +54,9 @@ const Dashboard = () => {
                                        Hallo, Akmal
                                     </span>
                                  </Nav.Link>
-                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                       <a href="/dashboard" className="dropdown-item fw-bold">
-                                          Dashboard
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="/dashboard-account" className="dropdown-item fw-bold">
-                                          Settings
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <hr class="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                       <a href="/" className="dropdown-item fw-bold">
-                                          Logout
-                                       </a>
-                                    </li>
-                                 </ul>
                               </li>
                               <li className="nav-item">
-                                 <a href="#a" className="nav-link d-line-block mt-2">
+                                 <a href="#a" className="nav-link d-inline-block mt-2">
                                     <img src={ic} alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
@@ -100,7 +79,7 @@ const Dashboard = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
+                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh" } : { width: "85vw", height: "100vh" }}>
                      <Container fluid>
                         <div className="fw-bold">
                            <h5 className="fw-bold fs-5">Dashboard</h5>

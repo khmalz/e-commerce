@@ -4,6 +4,7 @@ import dsl from "../../images/dashboard-store-logo.svg";
 
 const NavDashboard = () => {
    const monitor = window.innerWidth < 800;
+   const monitorK = window.innerWidth < 500;
    const dashClick = (e) => {
       e.target.classList.toggle("text-decoration-underline");
    };
@@ -13,7 +14,7 @@ const NavDashboard = () => {
    return (
       <>
          <div>
-            <div className="border-end sidenav h-100 bg-light" id="sidebar-wrapper">
+            <div className="border-end sidenav h-100 bg-light" id="sidebar">
                <div className="text-center">
                   <img src={dsl} alt="" className={monitor ? "mt-5 mb-2" : "mt-4 mb-2"} />
                </div>
@@ -43,7 +44,7 @@ const NavDashboard = () => {
                         Account
                      </NavLink>
                   </li>
-                  <li className="list-group-item">
+                  <li className="list-group-item" style={monitorK ? { marginTop: "140px" } : { marginTop: "250px" }}>
                      <NavLink exact to="/" className="list-group-item" onMouseOver={dashClick} onMouseOut={dashClick}>
                         Sign Out
                      </NavLink>
