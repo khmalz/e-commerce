@@ -1,8 +1,25 @@
-import { Button } from "react-bootstrap";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const Nofound = () => {
    let history = useHistory();
+   const [timer, setTimer] = useState(3);
+
+   useEffect(() => {
+      let interval = null;
+      let Back = null;
+      if (timer === -1) {
+         clearTimeout(Back);
+         clearInterval(interval);
+      } else {
+         Back = setTimeout(() => {
+            history.goBack();
+         }, 3200);
+         interval = setInterval(() => {
+            setTimer(timer - 1);
+         }, 1000);
+      }
+   }, [history, timer]);
 
    return (
       <div>
@@ -45,9 +62,9 @@ const Nofound = () => {
                   </g>
                </g>
             </svg>
-            <Button onClick={() => history.goBack()} variant="info" className="me-md-0 me-4 d-block d-md-inline-block  text-white">
-               Go Back
-            </Button>
+            <div className="bg-info bg-opacity-50 p-3 rounded-2">
+               Kamu akan kembali dalam <strong>{timer} Detik</strong>
+            </div>
          </div>
       </div>
    );

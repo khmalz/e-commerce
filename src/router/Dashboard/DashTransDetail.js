@@ -24,7 +24,7 @@ const DashTransDetail = () => {
 
    return (
       <>
-         <div className="page-dashboard">
+         <div className="page-dashboard overflow-hidden">
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
@@ -92,7 +92,7 @@ const DashTransDetail = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
+                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh" } : { width: "85vw", height: "100vh" }}>
                      <Container fluid>
                         <div>
                            <h5 className="fw-bold fs-5">#STORE10814</h5>

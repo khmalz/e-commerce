@@ -76,7 +76,7 @@ const DashTransactions = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
+                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh" } : { width: "85vw", height: "100vh" }}>
                      <Container fluid>
                         <div>
                            <h5 className="fw-bold fs-5">Transactions</h5>
