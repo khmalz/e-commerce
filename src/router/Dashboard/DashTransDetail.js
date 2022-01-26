@@ -22,9 +22,13 @@ const DashTransDetail = () => {
       wrap.classList.toggle("toggled");
    };
 
+   const bread = (e) => {
+      e.target.classList.toggle("text-decoration-underline");
+   };
+
    return (
       <>
-         <div className="page-dashboard overflow-hidden">
+         <div className="page-dashboard">
             <div className="d-flex" id="wrapper">
                <NavDashboard />
 
@@ -92,7 +96,7 @@ const DashTransDetail = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh" } : { width: "85vw", height: "100vh" }}>
+                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh", marginTop: "70px" } : { width: "76vw", height: "100vh" }}>
                      <Container fluid>
                         <div>
                            <h5 className="fw-bold fs-5">#STORE10814</h5>
@@ -103,7 +107,7 @@ const DashTransDetail = () => {
                                  <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                        <li className="breadcrumb-item">
-                                          <a href="/" className="text-secondary lh-lg text-decoration-none" onMouseOver={dashClick} onMouseOut={dashClick}>
+                                          <a href="/" className="text-secondary lh-lg text-decoration-none" onMouseOver={bread} onMouseOut={bread}>
                                              Home
                                           </a>
                                        </li>
@@ -117,41 +121,45 @@ const DashTransDetail = () => {
                         <Row>
                            <Col>
                               <Form>
-                                 <div class="card flex-row p-2 pt-3">
-                                    <div class="card-header border-0">
-                                       <img src={pdd} alt="images" />
+                                 {monitorK ? (
+                                    <div class="card flex-row p-2 pt-3">ha</div>
+                                 ) : (
+                                    <div class="card flex-row p-2 pt-3">
+                                       <div class="card-header border-0">
+                                          <img src={pdd} alt="images" width="250" height="205" />
+                                       </div>
+                                       <div class="px-2 ms-3" style={{ marginRight: "100px" }}>
+                                          <Col className="mb-4">
+                                             <p class="dashboard-title m-0 mb-1 mt-2">Customer Name</p>
+                                             <h5 class="fs-6 fw-bold">Arz</h5>
+                                          </Col>
+                                          <Col className="mb-4 ">
+                                             <p class="dashboard-title m-0 mb-1">Date of Transaction</p>
+                                             <h5 class="fs-6 fw-bold">5 Oktober, 2021</h5>
+                                          </Col>
+                                          <Col className="mb-5">
+                                             <p class="dashboard-title m-0 mb-1">Total Amount</p>
+                                             <h5 class="fs-6 fw-bold">$45,184</h5>
+                                          </Col>
+                                       </div>
+                                       <div class="px-2 ms-5">
+                                          <Col className="mb-4">
+                                             <p class="dashboard-title m-0 mb-1 mt-2">Product Name</p>
+                                             <h5 class="fs-6 fw-bold">DW Watch</h5>
+                                          </Col>
+                                          <Col className="mb-4">
+                                             <p class="dashboard-title m-0 mb-1">Status</p>
+                                             <h5 class="fs-6 fw-bold" style={{ color: "#F32355" }}>
+                                                Pending
+                                             </h5>
+                                          </Col>
+                                          <Col className="mb-5">
+                                             <p class="dashboard-title m-0 mb-1">Mobile</p>
+                                             <h5 class="fs-6 fw-bold">+62 858-3106-7841</h5>
+                                          </Col>
+                                       </div>
                                     </div>
-                                    <div class="px-2 ms-3 me-5">
-                                       <Col>
-                                          <p class="dashboard-title m-0">Customer Name</p>
-                                          <h5 class="fs-6 fw-bold">Arz</h5>
-                                       </Col>
-                                       <Col>
-                                          <p class="dashboard-title m-0">Date of Transaction</p>
-                                          <h5 class="fs-6 fw-bold">5 Oktober, 2021</h5>
-                                       </Col>
-                                       <Col>
-                                          <p class="dashboard-title m-0">Total Amount</p>
-                                          <h5 class="fs-6 fw-bold">$45,184</h5>
-                                       </Col>
-                                    </div>
-                                    <div class="px-2 ms-5">
-                                       <Col>
-                                          <p class="dashboard-title m-0">Product Name</p>
-                                          <h5 class="fs-6 fw-bold">DW Watch</h5>
-                                       </Col>
-                                       <Col>
-                                          <p class="dashboard-title m-0">Status</p>
-                                          <h5 class="fs-6 fw-bold" style={{ color: "#F32355" }}>
-                                             Pending
-                                          </h5>
-                                       </Col>
-                                       <Col>
-                                          <p class="dashboard-title m-0">Mobile</p>
-                                          <h5 class="fs-6 fw-bold">+62 858-3106-7841</h5>
-                                       </Col>
-                                    </div>
-                                 </div>
+                                 )}
                               </Form>
                            </Col>
                         </Row>
