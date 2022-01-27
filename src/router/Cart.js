@@ -15,45 +15,21 @@ const Cart = () => {
 
    const [city, setCity] = useState("Default");
 
-   const [westJ, setWestJ] = useState(false);
-   const [jakr, setJakr] = useState(false);
-   const [eastJ, setEastJ] = useState(false);
-   const [northS, setNorthS] = useState(false);
-   const [papua, setPapua] = useState(false);
+   const [kota, setKota] = useState({ westJ: false, jakr: false, eastJ: false, northS: false, papua: false });
 
    useEffect(() => {
       if (city === "JaBar") {
-         setWestJ(true);
-         setJakr(false);
-         setEastJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: true, jakr: false, eastJ: false, northS: false, papua: false });
       } else if (city === "Jakarta") {
-         setJakr(true);
-         setWestJ(false);
-         setEastJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: true, eastJ: false, northS: false, papua: false });
       } else if (city === "JaTim") {
-         setEastJ(true);
-         setJakr(false);
-         setWestJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: true, northS: false, papua: false });
       } else if (city === "NorSu") {
-         setNorthS(true);
-         setJakr(false);
-         setWestJ(false);
-         setEastJ(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: false, northS: true, papua: false });
       } else if (city === "Papua") {
-         setPapua(true);
-         setJakr(false);
-         setWestJ(false);
-         setEastJ(false);
-         setNorthS(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: false, northS: false, papua: true });
       }
-   }, [city]);
+   }, [city, kota]);
 
    const dashClick = (e) => {
       e.target.classList.toggle("text-decoration-underline");
@@ -245,35 +221,35 @@ const Cart = () => {
                            <option disabled>Choose Province First</option>
                         </>
                      ) : null}
-                     {jakr ? (
+                     {kota.jakr ? (
                         <>
                            {Kota.Jakarta.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
-                     {westJ ? (
+                     {kota.westJ ? (
                         <>
                            {Kota.Jabar.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
-                     {eastJ ? (
+                     {kota.eastJ ? (
                         <>
                            {Kota.Jatim.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
-                     {northS ? (
+                     {kota.northS ? (
                         <>
                            {Kota.Sumut.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
-                     {papua ? (
+                     {kota.papua ? (
                         <>
                            {Kota.Papua.map((e) => (
                               <option>{e}</option>
