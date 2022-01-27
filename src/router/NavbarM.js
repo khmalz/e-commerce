@@ -1,6 +1,5 @@
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import React from "react";
-import logo from "../images/logo.svg";
 import { NavLink } from "react-router-dom";
 
 const NavbarM = () => {
@@ -11,7 +10,7 @@ const NavbarM = () => {
          <Navbar bg="light" expand="lg" fixed="top" className={lokasi ? "shadow-sm" : "bg-transparent"}>
             <Container>
                <Navbar.Brand href="#home">
-                  <img src={logo} width="45" height="40" className="d-inline-block align-top" alt="" />
+                  <img src="images/logo.svg" width="45" height="40" className="d-inline-block align-top" alt="" />
                </Navbar.Brand>
                <Navbar.Toggle aria-controls="navbarScroll" />
                <Navbar.Collapse id="navbarScroll">

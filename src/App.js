@@ -3,7 +3,6 @@ import "./style/main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Home from "./router/Home";
-// import Categories from "./router/Categories";
 import Register from "./router/Register";
 import Login from "./router/Login";
 import Detail from "./router/Detail";

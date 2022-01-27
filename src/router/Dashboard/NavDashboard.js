@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import dsl from "../../images/dashboard-store-logo.svg";
 
 const NavDashboard = () => {
    const monitor = window.innerWidth < 800;
@@ -16,7 +15,7 @@ const NavDashboard = () => {
          <div>
             <div className="border-end sidenav h-100 bg-light" id="sidebar">
                <div className="text-center">
-                  <img src={dsl} alt="" className={monitor ? "mt-5 mb-2" : "mt-4 mb-2"} />
+                  <img src="images/dashboard-store-logo.svg" alt="" className={monitor ? "mt-5 mb-2" : "mt-4 mb-2"} />
                </div>
                <ul className="list-group list-group-flush">
                   <li className="list-group-item">

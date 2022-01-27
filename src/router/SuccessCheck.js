@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import suc from "../images/success.svg";
 
 const SuccessCheck = () => {
    const [war, setWar] = useState({ color: "#0dcaf0" });
@@ -14,7 +13,7 @@ const SuccessCheck = () => {
                <div className="section-success">
                   <div className="row align-item-center row-login justify-content-center">
                      <div className="col-lg-6 text-center">
-                        <img src={suc} alt="" className="mb-4" />
+                        <img src="images/success.svg" alt="" className="mb-4" />
                         <h2>Transition Proceed</h2>
                         <p>Silahkan tunggu pesan email dari kami dan kami akan memproses pesanan anda dengan cepat!</p>
                         <Row className="justify-content-center">

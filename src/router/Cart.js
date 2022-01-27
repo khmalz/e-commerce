@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Button, Col, Container, Form, Nav, Row, Table } from "react-bootstrap";
-import pc1 from "../images/products-1.jpg";
-import pc2 from "../images/product-card-2.png";
-import pc3 from "../images/products-2.jpg";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
-import us from "../images/user.jpg";
-import ic from "../images/icon_cart.svg";
 
 const Cart = () => {
    const [input, setInput] = useState({ adres1: "Jln Halim Perdanakusuma", adres2: "Blok 3 No. 35", pCode: "17154", noPhone: "087984366758" });
 
-   const Jakarta = ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"];
-   const Jabar = ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"];
-   const Jatim = ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"];
-   const Sumut = ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"];
-   const Papua = ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"];
+   const Kota = {
+      Jakarta: ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"],
+      Jabar: ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"],
+      Jatim: ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"],
+      Sumut: ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"],
+      Papua: ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"],
+   };
 
    const [city, setCity] = useState("Default");
 
@@ -68,7 +64,7 @@ const Cart = () => {
          <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
             <div class="container">
                <a class="navbar-brand" href="#j">
-                  <img src={logo} alt="Logo" />
+                  <img src="images/logo.svg" alt="Logo" />
                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                   <span class="navbar-toggler-icon"></span>
@@ -94,7 +90,7 @@ const Cart = () => {
                   <ul class="navbar-nav d-none d-lg-flex">
                      <li class="nav-item dropdown">
                         <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
                            <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                               Hallo, Akmal
                            </span>
@@ -102,7 +98,7 @@ const Cart = () => {
                      </li>
                      <li className="nav-item">
                         <a href="#a" className="nav-link d-inline-block mt-2">
-                           <img src={ic} alt="" />
+                           <img src="images/icon_cart.svg" alt="" />
                            <div className="cart-badge">3</div>
                         </a>
                      </li>
@@ -147,7 +143,7 @@ const Cart = () => {
                      <tbody>
                         <tr>
                            <td>
-                              <img src={pc1} width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/products-1.jpg" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Iphone</h6>
@@ -163,7 +159,7 @@ const Cart = () => {
                         </tr>
                         <tr>
                            <td>
-                              <img src={pc2} width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/product-card-2.png" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Camera</h6>
@@ -179,7 +175,7 @@ const Cart = () => {
                         </tr>
                         <tr>
                            <td>
-                              <img src={pc3} width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/products-2.jpg" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Sneakers</h6>
@@ -251,35 +247,35 @@ const Cart = () => {
                      ) : null}
                      {jakr ? (
                         <>
-                           {Jakarta.map((e) => (
+                           {Kota.Jakarta.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
                      {westJ ? (
                         <>
-                           {Jabar.map((e) => (
+                           {Kota.Jabar.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
                      {eastJ ? (
                         <>
-                           {Jatim.map((e) => (
+                           {Kota.Jatim.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
                      {northS ? (
                         <>
-                           {Sumut.map((e) => (
+                           {Kota.Sumut.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>
                      ) : null}
                      {papua ? (
                         <>
-                           {Papua.map((e) => (
+                           {Kota.Papua.map((e) => (
                               <option>{e}</option>
                            ))}
                         </>

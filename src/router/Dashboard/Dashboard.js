@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import us from "../../images/user.jpg";
-import ic from "../../images/icon_cart.svg";
-import dip1 from "../../images/dashboard-icon-product1.png";
-import dip2 from "../../images/dashboard-icon-product2.png";
-import dip3 from "../../images/dashboard-icon-product3.png";
-import dar from "../../images/dashboard-arrow-right.svg";
 import { Button, Card, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
 
@@ -49,7 +43,7 @@ const Dashboard = () => {
                            <ul className="navbar-nav d-none d-lg-flex ms-auto">
                               <li class="nav-item dropdown">
                                  <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
                                     <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                                        Hallo, Akmal
                                     </span>
@@ -57,7 +51,7 @@ const Dashboard = () => {
                               </li>
                               <li className="nav-item">
                                  <a href="#a" className="nav-link d-inline-block mt-2">
-                                    <img src={ic} alt="" />
+                                    <img src="images/icon_cart.svg" alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
                               </li>
@@ -122,13 +116,13 @@ const Dashboard = () => {
                                        <Card.Body>
                                           <Row className="fw-bolder">
                                              <Col md={1}>
-                                                <img src={dip1} alt="" />
+                                                <img src="images/dashboard-icon-product1.png" alt="" />
                                              </Col>
                                              <Col md={4}>Dw Watch</Col>
                                              <Col md={3}>Reza</Col>
                                              <Col md={3}>5 Oktober, 2021</Col>
                                              <Col md={1} className="d-none d-md-block">
-                                                <img src={dar} alt="" />
+                                                <img src="images/dashboard-arrow-right.svg" alt="" />
                                              </Col>
                                           </Row>
                                        </Card.Body>
@@ -140,13 +134,13 @@ const Dashboard = () => {
                                        <Card.Body>
                                           <Row className="fw-bold">
                                              <Col md={1}>
-                                                <img src={dip2} alt="" />
+                                                <img src="images/dashboard-icon-product2.png" alt="" />
                                              </Col>
                                              <Col md={4}>Parfume</Col>
                                              <Col md={3}>Ina</Col>
                                              <Col md={3}>19 November, 2021</Col>
                                              <Col md={1} className="d-none d-md-block">
-                                                <img src={dar} alt="" />
+                                                <img src="images/dashboard-arrow-right.svg" alt="" />
                                              </Col>
                                           </Row>
                                        </Card.Body>
@@ -158,13 +152,13 @@ const Dashboard = () => {
                                        <Card.Body>
                                           <Row className="fw-bold">
                                              <Col md={1}>
-                                                <img src={dip3} alt="" />
+                                                <img src="images/dashboard-icon-product3.png" alt="" />
                                              </Col>
                                              <Col md={4}>YSL Sing Bag</Col>
                                              <Col md={3}>Rayya</Col>
                                              <Col md={3}>3 Januari, 2022</Col>
                                              <Col md={1} className="d-none d-md-block">
-                                                <img src={dar} alt="" />
+                                                <img src="images/dashboard-arrow-right.svg" alt="" />
                                              </Col>
                                           </Row>
                                        </Card.Body>

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Form, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
-import us from "../../images/user.jpg";
-import ic from "../../images/icon_cart.svg";
 
 const DashAcc = () => {
    const [input, setInput] = useState({ adres1: "Jln. Dermaga Raya", adres2: "005/08 ", pCode: "17154", noPhone: "087984366758" });
@@ -86,7 +84,7 @@ const DashAcc = () => {
                            <ul className="navbar-nav d-none d-lg-flex ms-auto">
                               <li class="nav-item dropdown">
                                  <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
                                     <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                                        Hallo, Akmal
                                     </span>
@@ -94,7 +92,7 @@ const DashAcc = () => {
                               </li>
                               <li className="nav-item">
                                  <a href="#a" className="nav-link d-line-block mt-2">
-                                    <img src={ic} alt="" />
+                                    <img src="images/icon_cart.svg" alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
                               </li>

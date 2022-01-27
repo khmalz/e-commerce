@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 const Nofound = () => {
    let history = useHistory();
-   const [timer, setTimer] = useState(3);
 
    useEffect(() => {
-      let interval = null;
-      let Back = null;
-      if (timer === -1) {
-         clearTimeout(Back);
-         clearInterval(interval);
-      } else {
-         Back = setTimeout(() => {
-            history.goBack();
-         }, 3200);
-         interval = setInterval(() => {
-            setTimer(timer - 1);
-         }, 1000);
-      }
-   }, [history, timer]);
+      const Back = setTimeout(() => {
+         history.goBack();
+      }, 2500);
+
+      return () => clearTimeout(Back);
+   }, [history]);
 
    return (
       <div>
@@ -62,9 +53,7 @@ const Nofound = () => {
                   </g>
                </g>
             </svg>
-            <div className="bg-info bg-opacity-50 p-3 rounded-2">
-               Kamu akan kembali dalam <strong>{timer} Detik</strong>
-            </div>
+            <div className="text-white bg-info p-2 rounded-2">You Will Back Automatically</div>
          </div>
       </div>
    );

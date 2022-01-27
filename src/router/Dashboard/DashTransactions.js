@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import NavDashboard from "./NavDashboard";
-import us from "../../images/user.jpg";
-import ic from "../../images/icon_cart.svg";
-import dip1 from "../../images/dashboard-icon-product1.png";
-import dip2 from "../../images/dashboard-icon-product2.png";
-import dip3 from "../../images/dashboard-icon-product3.png";
-import dpc4 from "../../images/product-card-4.png";
 
 const DashTransactions = () => {
    const [aktif, setAktif] = useState(false);
@@ -46,7 +40,7 @@ const DashTransactions = () => {
                            <ul className="navbar-nav d-none d-lg-flex ms-auto">
                               <li class="nav-item dropdown">
                                  <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
                                     <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                                        Hallo, Akmal
                                     </span>
@@ -54,7 +48,7 @@ const DashTransactions = () => {
                               </li>
                               <li className="nav-item">
                                  <a href="#a" className="nav-link d-line-block mt-2">
-                                    <img src={ic} alt="" />
+                                    <img src="images/icon_cart.svg" alt="" />
                                     <div className="cart-badge">3</div>
                                  </a>
                               </li>
@@ -103,7 +97,7 @@ const DashTransactions = () => {
                                           <Card.Body>
                                              <Row className="fw-bold">
                                                 <Col md={1}>
-                                                   <img src={dip1} alt="" />
+                                                   <img src="images/dashboard-icon-product1.png" alt="" />
                                                 </Col>
                                                 <Col md={4}>Dw Watch</Col>
                                                 <Col md={3}>Leroy</Col>
@@ -118,7 +112,7 @@ const DashTransactions = () => {
                                           <Card.Body>
                                              <Row className="fw-bold">
                                                 <Col md={1}>
-                                                   <img src={dip2} alt="" />
+                                                   <img src="images/dashboard-icon-product2.png" alt="" />
                                                 </Col>
                                                 <Col md={4}>Parfume</Col>
                                                 <Col md={3}>Divya</Col>
@@ -133,7 +127,7 @@ const DashTransactions = () => {
                                           <Card.Body>
                                              <Row className="fw-bold">
                                                 <Col md={1}>
-                                                   <img src={dip3} alt="" />
+                                                   <img src="images/dashboard-icon-product3.png" alt="" />
                                                 </Col>
                                                 <Col md={4}>YSL Sing Bag</Col>
                                                 <Col md={3}>Anindira</Col>
@@ -153,7 +147,7 @@ const DashTransactions = () => {
                                           <Card.Body>
                                              <Row className="fw-bold">
                                                 <Col md={1}>
-                                                   <img src={dpc4} width="45  " height="45  " alt="" />
+                                                   <img src="images/product-card-4.png" width="45  " height="45  " alt="" />
                                                 </Col>
                                                 <Col md={4}>Macbook</Col>
                                                 <Col md={3}>Anindira</Col>

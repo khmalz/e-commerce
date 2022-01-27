@@ -1,16 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import pd1 from "../images/product-detail-1.jpg";
-import pd2 from "../images/product-detail-2.jpg";
-import pd3 from "../images/product-detail-3.jpg";
-import pd4 from "../images/product-detail-4.jpg";
-import cr1 from "../images/customer-review-1.png";
-import cr2 from "../images/customer-review-2.png";
-import cr3 from "../images/customer-review-3.png";
 import { Nav } from "react-bootstrap";
-import logo from "../images/logo.svg";
-import us from "../images/user.jpg";
-import icp from "../images/icon_cart_empty.svg";
 
 const Detail = () => {
    const imgClick = (e) => {
@@ -41,7 +31,7 @@ const Detail = () => {
          <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
             <div class="container">
                <a class="navbar-brand" href="#j">
-                  <img src={logo} alt="Logo" />
+                  <img src="images/logo.svg" alt="Logo" />
                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                   <span class="navbar-toggler-icon"></span>
@@ -67,7 +57,7 @@ const Detail = () => {
                   <ul class="navbar-nav d-none d-lg-flex">
                      <li class="nav-item dropdown">
                         <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <img src={us} alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
                            <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                               Hallo, Akmal
                            </span>
@@ -75,7 +65,7 @@ const Detail = () => {
                      </li>
                      <li class="nav-item">
                         <a href="#a" class="nav-link d-inline-block mt-3">
-                           <img src={icp} alt="" />
+                           <img src="images/icon_cart_empty.svg" alt="" />
                         </a>
                      </li>
                   </ul>
@@ -109,21 +99,21 @@ const Detail = () => {
          <Container className="container-img" onClick={imgClick}>
             <Row>
                <Col lg={7}>
-                  <img src={pd1} className="w-100 h-100 jumbo" alt="" />
+                  <img src="images/product-detail-1.jpg" className="w-100 h-100 jumbo" alt="" />
                </Col>
                <Col lg={2}>
                   <Row>
                      <Col lg={12} className="col-3 mt-2 mt-lg-0">
-                        <img className="thumb" src={pd1} alt="" />
+                        <img className="thumb" src="images/product-detail-1.jpg" alt="" />
                      </Col>
                      <Col lg={12} className="col-3 mt-2 mt-lg-0">
-                        <img className="thumb" src={pd2} alt="" />
+                        <img className="thumb" src="images/product-detail-2.jpg" alt="" />
                      </Col>
                      <Col lg={12} className="col-3 mt-2 mt-lg-0">
-                        <img className="thumb" src={pd3} alt="" />
+                        <img className="thumb" src="images/product-detail-3.jpg" alt="" />
                      </Col>
                      <Col lg={12} className="col-3 mt-2 mt-lg-0">
-                        <img className="thumb" src={pd4} alt="" />
+                        <img className="thumb" src="images/product-detail-4.jpg" alt="" />
                      </Col>
                   </Row>
                </Col>
@@ -168,21 +158,21 @@ const Detail = () => {
                <Col lg={7}>
                   <ul className="list-unstyled">
                      <li className="d-flex mt-4 mb-1">
-                        <img src={cr1} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
+                        <img src="images/customer-review-1.png" className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
                            <h6 className="fw-bold mt-2">Anindira</h6>
                            <p className="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque magnam possimus iusto harum quasi quis, vero laboriosam molestias dolore!</p>
                         </div>
                      </li>
                      <li className="d-flex mb-1">
-                        <img src={cr2} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
+                        <img src="images/customer-review-2.png" className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
                            <h6 className="fw-bold mt-2">Leroy</h6>
                            <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat assumenda excepturi eos. Temporibus consectetur tempore totam ex praesentium assumenda fuga repellendus?</p>
                         </div>
                      </li>
                      <li className="d-flex mb-1">
-                        <img src={cr3} className="pointer me-2 rounded circle" width="50" height="40" alt="" />
+                        <img src="images/customer-review-3.png" className="pointer me-2 rounded circle" width="50" height="40" alt="" />
                         <div>
                            <h6 className="fw-bold mt-2">Divya</h6>
                            <p className="text-justify">

@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
-import lplc from "../images/login-placeholder.png";
 import NavbarM from "./NavbarM";
 
 function Login() {
@@ -15,7 +14,7 @@ function Login() {
          <Container className="mt-5 pt-5">
             <Row className="align-items-center">
                <Col lg={6} className=" text-center">
-                  <img src={lplc} alt="" className="w-50 mb-4 mb-lg-none" />
+                  <img src="images/login-placeholder.png" alt="" className="w-50 mb-4 mb-lg-none" />
                </Col>
                <Col lg={5}>
                   <h2>
