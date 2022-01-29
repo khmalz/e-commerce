@@ -7,7 +7,7 @@ const Nofound = () => {
    useEffect(() => {
       const Back = setTimeout(() => {
          history.goBack();
-      }, 2500);
+      }, 1100);
 
       return () => clearTimeout(Back);
    }, [history]);

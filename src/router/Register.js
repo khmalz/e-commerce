@@ -5,7 +5,48 @@ import { Link } from "react-router-dom";
 import NavbarM from "./NavbarM";
 
 function Register() {
-   const [checked, setChecked] = useState(true);
+   const [checked, setChecked] = useState(false);
+   const [action, setAction] = useState("");
+   const [input, setInput] = useState({ fullName: "Akmal", email: "", password: "" });
+   const [notif, setNotif] = useState(false);
+
+   const formFname = (e) => {
+      setInput({ ...input, fullName: e.target.value });
+      if (e.target.value.length > 3) {
+         e.target.classList.add("is-valid");
+         e.target.classList.remove("is-invalid");
+      } else {
+         e.target.classList = "form-control is-invalid";
+      }
+   };
+
+   const formEmail = (e) => {
+      setInput({ ...input, email: e.target.value });
+      if (e.target.value.length > 5) {
+         e.target.classList.add("is-valid");
+         e.target.classList.remove("is-invalid");
+      } else {
+         e.target.classList = "form-control is-invalid";
+      }
+   };
+
+   const formPassw = (e) => {
+      setInput({ ...input, password: e.target.value });
+      if (e.target.value.length > 5) {
+         e.target.classList.add("is-valid");
+         e.target.classList.remove("is-invalid");
+      } else {
+         e.target.classList = "form-control is-invalid";
+      }
+   };
+
+   const validasi = () => {
+      if (input.fullName.length > 3 && input.email.length > 5 && input.password > 5) {
+         setAction("/success-register");
+      } else {
+         setNotif(true);
+      }
+   };
 
    return (
       <div>
@@ -16,19 +57,24 @@ function Register() {
          <Container className="mt-5 pt-5" style={{ height: "800px" }}>
             <Row className="align-items-center justify-content-center">
                <Col lg={4}>
+                  {notif ? alert("Anda harus mengisi data sesuai dengan syarat") : null}
+
                   <h2>
                      Memulai untuk Jual beli <br />
                      dengan gaya baru
                   </h2>
-                  <Form action="" className="mt-3">
+                  <Form onSubmit={validasi} action={action} className="mt-3">
                      <FloatingLabel controlId="floatingInput" label="Full Name" className="mb-3 ">
-                        <Form.Control type="text" placeholder="Nakamura" autoComplete="off" />
+                        <Form.Control className="is-valid" type="text" placeholder="Khairul Akmal" autoComplete="off" value={input.fullName} onChange={formFname} />
+                        <Form.Text className="text-muted">Minimal banyak huruf untuk Nama adalah 4.</Form.Text>
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingEmail" label="Email address" className="mb-3">
-                        <Form.Control type="email" placeholder="name@example.com" autoComplete="off" />
+                        <Form.Control className="is-invalid" type="email" placeholder="name@example.com" autoComplete="off" value={input.email} onChange={formEmail} />
+                        <Form.Text className="text-muted">Minimal banyak huruf untuk Email adalah 6.</Form.Text>
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingPassword" label="Password">
-                        <Form.Control type="password" placeholder="Password" autoComplete="off" />
+                        <Form.Control className="is-invalid" type="password" placeholder="Password" autoComplete="off" value={input.password} onChange={formPassw} />
+                        <Form.Text className="text-muted">Minimal banyak huruf untuk Password adalah 6.</Form.Text>
                      </FloatingLabel>
                      <hr />
 
@@ -81,12 +127,10 @@ function Register() {
                      )}
 
                      <Row className=" mt-2">
-                        <Button variant="success" className="mt-2">
-                           <Link to="/login" className="text-decoration-none text-white">
-                              Sign Up Now
-                           </Link>
+                        <Button type="submit" variant="success" className="mt-2">
+                           Sign Up Now
                         </Button>
-                        <Button variant="secondary" className="mt-1">
+                        <Button variant="secondary" className="mt-2">
                            <Link to="/login" className="text-decoration-none text-white">
                               Back Sign In
                            </Link>

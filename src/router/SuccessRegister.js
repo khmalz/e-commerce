@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const SuccessCheck = () => {
+const SuccessRegister = () => {
    const [war, setWar] = useState({ color: "#0dcaf0" });
 
    return (
@@ -14,8 +14,10 @@ const SuccessCheck = () => {
                   <div className="row align-item-center row-login justify-content-center">
                      <div className="col-lg-6 text-center">
                         <img src="images/success.svg" alt="" className="mb-4" />
-                        <h2>Transition Proceed</h2>
-                        <p>Silahkan tunggu pesan email dari kami dan kami akan memproses pesanan anda dengan cepat!</p>
+                        <h2 className="fw-bold">Welcome To Store</h2>
+                        <p>
+                           Kamu Sudah Berhasil Terdaftar Bersama Kami <br /> Let's Grow Up Now
+                        </p>
                         <Row className="justify-content-center">
                            <Link to="/dashboard" className="text-decoration-none">
                               <Button variant="outline-success" className="w-75">
@@ -50,4 +52,4 @@ const SuccessCheck = () => {
    );
 };
 
-export default SuccessCheck;
+export default SuccessRegister;

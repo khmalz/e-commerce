@@ -14,6 +14,8 @@ import DashSettings from "./router/Dashboard/DashSettings";
 import SuccessCheck from "./router/SuccessCheck";
 import DashAcc from "./router/Dashboard/DashAcc";
 import DashTransDetail from "./router/Dashboard/DashTransDetail";
+import Categories from "./router/Categories";
+import SuccessRegister from "./router/SuccessRegister";
 
 const App = () => {
    return (
@@ -23,9 +25,10 @@ const App = () => {
                <Route path="/" exact component={Home} />
                <Route path="/register" component={Register} />
                <Route path="/login" component={Login} />
-               <Route path="/categories" component={Detail} />
+               <Route path="/categories" component={Categories} />
                <Route path="/detail" component={Detail} />
                <Route path="/cart" component={Cart} />
+               <Route path="/success-register" component={SuccessRegister} />
                <Route path="/success" component={SuccessCheck} />
                <Route path="/dashboard" component={Dashboard} />
                <Route path="/dashboard-transactions" component={DashTransactions} />

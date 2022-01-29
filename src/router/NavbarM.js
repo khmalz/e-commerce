@@ -21,7 +21,7 @@ const NavbarM = () => {
                         </NavLink>
                      </Nav.Link>
                      <Nav.Link className="me-4">
-                        <NavLink activeClassName="activation" className="text-decoration-none" style={{ color: "#848485" }} to="/detail">
+                        <NavLink activeClassName="activation" className="text-decoration-none" style={{ color: "#848485" }} to="/categories">
                            Categories
                         </NavLink>
                      </Nav.Link>
@@ -37,7 +37,7 @@ const NavbarM = () => {
                      </Nav.Link>
                   </Nav>
                   <Form className="d-flex">
-                     <a class="nav-link btn btn-success px-3 text-light" href="/login">
+                     <a className="nav-link btn btn-success px-3 text-light w-100" href="/login">
                         Sign In
                      </a>
                   </Form>
