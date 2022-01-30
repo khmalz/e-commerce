@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Col, Container, Form, Nav, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Form, Nav, Navbar, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -37,51 +37,35 @@ const Cart = () => {
 
    return (
       <div className="pt-5" style={{ height: "1000px" }}>
-         <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
-            <div class="container">
-               <a class="navbar-brand" href="#j">
+         <Navbar bg="light" expand="lg" fixed="top">
+            <Container>
+               <Navbar.Brand href="#home">
                   <img src="images/logo.svg" alt="Logo" />
-               </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarResponsive">
-                  <ul class="navbar-nav ms-auto">
-                     <li class="nav-item ">
-                        <a href="/" class="nav-link">
-                           Home
-                        </a>
-                     </li>
-                     <li class="nav-item ">
-                        <a href="/categories" class="nav-link activation">
-                           Categories
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="/rewards" class="nav-link">
-                           Rewards
-                        </a>
-                     </li>
-                  </ul>
-                  <ul class="navbar-nav d-none d-lg-flex">
-                     <li class="nav-item dropdown">
-                        <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
+               </Navbar.Brand>
+               <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="ms-auto">
+                     <Nav.Link href="/">Home</Nav.Link>
+                     <Nav.Link href="/categories">Categories</Nav.Link>
+                     <Nav.Link href="/rewards">Rewards</Nav.Link>
+                  </Nav>
+                  <Nav className="d-none d-lg-flex">
+                     <Nav.Link className="dropdown">
+                        <Nav.Link className="dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 mb-1" style={{ maxHeight: "45px", marginLeft: "-20px" }} />
                            <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                               Hallo, Akmal
                            </span>
                         </Nav.Link>
-                     </li>
-                     <li className="nav-item">
-                        <a href="#a" className="nav-link d-inline-block mt-2">
-                           <img src="images/icon_cart.svg" alt="" />
-                           <div className="cart-badge">3</div>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
+                     </Nav.Link>
+                     <Nav.Link className="d-inline-block mt-3" style={{ marginLeft: "-13px " }}>
+                        <img src="images/icon_cart.svg" alt="" />
+                        <div className="cart">3</div>
+                     </Nav.Link>
+                  </Nav>
+               </Navbar.Collapse>
+            </Container>
+         </Navbar>
 
          {/* ----------------------------------------------------------------------------------------- | BreadCrumb | ------------------------------------------------------------------------------------------------- */}
 
@@ -95,7 +79,7 @@ const Cart = () => {
                               Home
                            </a>
                         </li>
-                        <li className="breadcrumb-item text-dark lh-lg" style={{ fontSize: "1.1rem" }}>
+                        <li className="breadcrumb-item text-black lh-lg" style={{ fontSize: "1.1rem" }}>
                            Cart
                         </li>
                      </ol>
@@ -119,7 +103,7 @@ const Cart = () => {
                      <tbody>
                         <tr>
                            <td>
-                              <img src="images/products-1.jpg" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/products-1.jpg" width="160" height="90" alt="" className="ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Iphone</h6>
@@ -130,12 +114,12 @@ const Cart = () => {
                               <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
-                              <Button className="btn-danger">Remove</Button>
+                              <Button variant="danger">Remove</Button>
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <img src="images/product-card-2.png" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/product-card-2.png" width="160" height="90" alt="" className="ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Camera</h6>
@@ -146,12 +130,12 @@ const Cart = () => {
                               <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
-                              <Button className="btn-danger">Remove</Button>
+                              <Button variant="danger">Remove</Button>
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <img src="images/products-2.jpg" width="160" height="90" alt="" className="cart-image ms-5 mb-2" style={{ marginTop: "-10px" }} />
+                              <img src="images/products-2.jpg" width="160" height="90" alt="" className="ms-5 mb-2" style={{ marginTop: "-10px" }} />
                            </td>
                            <td>
                               <h6 className="lead ">Sneakers</h6>
@@ -162,7 +146,7 @@ const Cart = () => {
                               <p className="text-secondary">Dolar USD</p>
                            </td>
                            <td>
-                              <Button className="btn-danger">Remove</Button>
+                              <Button variant="danger">Remove</Button>
                            </td>
                         </tr>
                      </tbody>
@@ -319,7 +303,7 @@ const Cart = () => {
                   <p className="text-secondary">Total</p>
                </Col>
                <Col md={3} className="col-8 text-center">
-                  <Button variant="success" className="w-75" style={{ display: "blok" }}>
+                  <Button variant="success" className="w-100" style={{ display: "blok" }}>
                      <Link to="/success" className="text-white text-decoration-none">
                         Checkout Now
                      </Link>

@@ -6,7 +6,7 @@ import NavbarM from "./NavbarM";
 function Login() {
    const monitor = window.innerWidth < 840 && window.innerWidth > 576;
    const [action, setAction] = useState("");
-   const [input, setInput] = useState({ email: "", password: "" });
+   const [input, setInput] = useState({ email: "akmal@gmail.com", password: "" });
    const [notif, setNotif] = useState({ notif1: false, notif2: false });
 
    const formEmail = (e) => {
@@ -30,7 +30,7 @@ function Login() {
    };
 
    const validasi = () => {
-      if (input.email === "akmal@gmail.com" && input.password === "123456") {
+      if (input.email === "akmal@gmail.com" && input.password === "123212") {
          setAction("/dashboard");
       } else {
          if (input.email === "" && input.password === "") {
@@ -84,13 +84,13 @@ function Login() {
 
          <footer style={{ marginTop: "200px" }}>
             <hr style={{ marginBottom: "3px" }} />
-            <div class="container">
-               <div class="row">
-                  <div class="col-12 text-center text-secondary">
-                     <p class="pt-4 pb-2">2022 &copy;Copyright Akmal. All Right Reserved</p>
+            <Container>
+               <Row>
+                  <div className="col-12 text-center text-secondary">
+                     <p className="pt-4 pb-2">2022 &copy;Copyright Akmal. All Right Reserved</p>
                   </div>
-               </div>
-            </div>
+               </Row>
+            </Container>
          </footer>
       </>
    );

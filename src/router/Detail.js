@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Navbar, Row } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 
 const Detail = () => {
@@ -26,52 +26,39 @@ const Detail = () => {
       e.target.classList.toggle("text-decoration-underline");
    };
 
+   const monitor = window.innerWidth;
+
    return (
       <>
-         <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
-            <div class="container">
-               <a class="navbar-brand" href="#j">
+         <Navbar bg="light" expand="lg" fixed="top">
+            <Container>
+               <Navbar.Brand href="#home">
                   <img src="images/logo.svg" alt="Logo" />
-               </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarResponsive">
-                  <ul class="navbar-nav ms-auto">
-                     <li class="nav-item ">
-                        <a href="/" class="nav-link">
-                           Home
-                        </a>
-                     </li>
-                     <li class="nav-item ">
-                        <a href="/categories" class="nav-link activation">
-                           Categories
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="/rewards" class="nav-link">
-                           Rewards
-                        </a>
-                     </li>
-                  </ul>
-                  <ul class="navbar-nav d-none d-lg-flex">
-                     <li class="nav-item dropdown">
-                        <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
+               </Navbar.Brand>
+               <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="ms-auto">
+                     <Nav.Link href="/">Home</Nav.Link>
+                     <Nav.Link href="/categories">Categories</Nav.Link>
+                     <Nav.Link href="/rewards">Rewards</Nav.Link>
+                  </Nav>
+                  <Nav className="d-none d-lg-flex">
+                     <Nav.Link className="nav-item dropdown">
+                        <Nav.Link className="dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <img src="images/user.jpg" alt="" className="rounded-circle me-2 mb-1" style={{ maxHeight: "45px", marginLeft: "-20px" }} />
                            <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                               Hallo, Akmal
                            </span>
                         </Nav.Link>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#a" class="nav-link d-inline-block mt-3">
-                           <img src="images/icon_cart_empty.svg" alt="" />
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
+                     </Nav.Link>
+                     <Nav.Link className="nav-link d-inline-block mt-3" style={{ marginLeft: "-13px " }}>
+                        <img src="images/icon_cart.svg" alt="" />
+                        <div className="cart">3</div>
+                     </Nav.Link>
+                  </Nav>
+               </Navbar.Collapse>
+            </Container>
+         </Navbar>
 
          {/* ----------------------------------------------------------------------------------------- | BreadCrumb | ------------------------------------------------------------------------------------------------- */}
 
@@ -131,15 +118,16 @@ const Detail = () => {
                      $113,3
                   </div>
                </Col>
-               <Col lg={2} className="ms-0 ms-lg-1 mt-3">
-                  <a href="/cart" class="btn btn-success px-5 text-white btn-block mb-3">
+               <Col lg={3} className="ms-0 ms-lg-1 mt-3">
+                  <Button variant="success" href="/cart" className={`px-5 text-white mb-3 text-wrap ${monitor < 500 ? `w-100` : ``} ${monitor > 501 && monitor < 900 ? `btn-lg ` : ``}`}>
                      Add to Cart
-                  </a>
+                  </Button>
                </Col>
             </Row>
-
-            <Row className="mt-3">
+            <Row>
                <Col lg={7} className="col-12 text-justify">
+                  <hr className="shadow-lg" />
+                  <h6 className="fw-bold">Deskripsi Produk</h6>
                   <p>
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem incidunt voluptas tempore veritatis facere quos, saepe dolor magnam sunt, quod officia ratione ut consequatur! Consequatur, vero? Doloremque, in id.
                   </p>
@@ -151,7 +139,7 @@ const Detail = () => {
 
             <Row>
                <Col>
-                  <h6 className="fw-bold pointer">Costumer Review (3)</h6>
+                  <h6 className="fw-bold pointer mt-3">Costumer Review (3)</h6>
                </Col>
             </Row>
             <Row>

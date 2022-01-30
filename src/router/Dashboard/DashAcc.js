@@ -6,72 +6,54 @@ const DashAcc = () => {
    const [input, setInput] = useState({ adres1: "Jln. Dermaga Raya", adres2: "005/08 ", pCode: "17154", noPhone: "087984366758" });
 
    const [city, setCity] = useState("Default");
-   const [westJ, setWestJ] = useState(false);
-   const [jakr, setJakr] = useState(false);
-   const [eastJ, setEastJ] = useState(false);
-   const [northS, setNorthS] = useState(false);
-   const [papua, setPapua] = useState(false);
 
-   const Jakarta = ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"];
-   const Jabar = ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"];
-   const Jatim = ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"];
-   const Sumut = ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"];
-   const Papua = ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"];
+   const [kota, setKota] = useState({ westJ: false, jakr: false, eastJ: false, northS: false, papua: false });
+
+   const Kota = {
+      Jakarta: ["Kepulauan Seribu", "Jakarta Utara", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Pusat"],
+      Jabar: ["Bandung", "Bogor", "Bekasi", "Depok", "Cimahi", "Tasikmalaya", "Banjar", "Cirebon", "Sukabumi", "Cianjur", "Purwakarta"],
+      Jatim: ["Surabaya", "Kediri", "Malang", "Blitar", "Probolinggo", "Mojokerto", "Batu", "Madiun", "Gresik", "Lamongan", "Sidoarjo", "Banyuwangi", "Ponorogo"],
+      Sumut: ["Medan", "Binjai", "Tanjung Balai", "Nias", "Samosir", "Sibolaga", "Karo", "Dairi"],
+      Papua: ["Jayapura", "Merauke", "Serui", "Puncak Jaya", "Asmat", "Intan Jaya", "Nduga", "Jayawijaya"],
+   };
+
    const [aktif, setAktif] = useState(false);
-   const [stic, setStic] = useState("200px");
+   const [stic, setStic] = useState("235px");
+   const monitor = window.innerWidth < 800;
    const monitorK = window.innerWidth < 500;
 
    useEffect(() => {
       if (monitorK) {
          setStic("0");
       }
+
       if (city === "JaBar") {
-         setWestJ(true);
-         setJakr(false);
-         setEastJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: true, jakr: false, eastJ: false, northS: false, papua: false });
       } else if (city === "Jakarta") {
-         setJakr(true);
-         setWestJ(false);
-         setEastJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: true, eastJ: false, northS: false, papua: false });
       } else if (city === "JaTim") {
-         setEastJ(true);
-         setJakr(false);
-         setWestJ(false);
-         setNorthS(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: true, northS: false, papua: false });
       } else if (city === "NorSu") {
-         setNorthS(true);
-         setJakr(false);
-         setWestJ(false);
-         setEastJ(false);
-         setPapua(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: false, northS: true, papua: false });
       } else if (city === "Papua") {
-         setPapua(true);
-         setJakr(false);
-         setWestJ(false);
-         setEastJ(false);
-         setNorthS(false);
+         setKota({ ...kota, westJ: false, jakr: false, eastJ: false, northS: false, papua: true });
       }
-   }, [monitorK, city]);
+   }, [monitorK, city, kota]);
 
    const dashClick = () => {
-      const wrap = document.querySelector("#wrapper");
       setAktif(!aktif);
-      wrap.classList.toggle("toggled");
+      const sidebar = document.querySelector("#sidebars");
+      sidebar.classList.toggle("active-nav");
    };
 
    return (
       <>
-         <div className="page-dashboard overflow-hidden">
-            <div className="d-flex" id="wrapper">
+         <div style={monitor ? { marginTop: "-25px" } : { overflow: "hidden" }}>
+            <div className="d-flex">
                <NavDashboard />
 
-               <div id="page-content-wrapper" style={{ marginLeft: stic }}>
-                  <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
+               <div style={monitorK ? { marginTop: "80px" } : {} && { marginLeft: stic, backgroundColor: "#f5f5fb" }}>
+                  <Navbar expand="lg" fixed="top" bg={monitorK ? "light" : ""}>
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">
                            Menu
@@ -81,22 +63,20 @@ const DashAcc = () => {
                         </Button>
 
                         <Navbar.Collapse id="navbarSupportedContent">
-                           <ul className="navbar-nav d-none d-lg-flex ms-auto">
-                              <li class="nav-item dropdown">
-                                 <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <Nav className="d-none d-lg-flex ms-auto">
+                              <Nav.Link className="dropdown">
+                                 <Nav.Link className="dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 mb-1" style={{ maxHeight: "45px", marginLeft: "-20px" }} />
                                     <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                                        Hallo, Akmal
                                     </span>
                                  </Nav.Link>
-                              </li>
-                              <li className="nav-item">
-                                 <a href="#a" className="nav-link d-line-block mt-2">
-                                    <img src="images/icon_cart.svg" alt="" />
-                                    <div className="cart-badge">3</div>
-                                 </a>
-                              </li>
-                           </ul>
+                              </Nav.Link>
+                              <Nav.Link className="d-inline-block mt-3" style={{ marginLeft: "-13px " }}>
+                                 <img src="images/icon_cart.svg" alt="" />
+                                 <div className="cart">3</div>
+                              </Nav.Link>
+                           </Nav>
 
                            <ul className="navbar-nav d-block d-lg-none">
                               <li className="nav-item">
@@ -114,7 +94,7 @@ const DashAcc = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={{ height: "100vh" }}>
+                  <div className="content" style={monitorK ? { height: "100vh" } : { width: "83vw", height: "100vh", paddingRight: "1vw" }}>
                      <Container fluid>
                         <div>
                            <h5 className="fw-bold fs-5">My Account</h5>
@@ -124,7 +104,7 @@ const DashAcc = () => {
                         <Row>
                            <Col>
                               <Form>
-                                 <Card style={monitorK ? { width: "95vw" } : { width: "83vw" }}>
+                                 <Card>
                                     <Card.Body>
                                        <Row>
                                           <Col md={6}>
@@ -165,7 +145,7 @@ const DashAcc = () => {
                                                 {city === "Default" ? (
                                                    <>
                                                       <option>Jakarta Timur</option>
-                                                      {Jakarta.reduce(function (result, kota) {
+                                                      {Kota.Jakarta.reduce(function (result, kota) {
                                                          if (kota !== "Jakarta Timur") {
                                                             result.push(kota);
                                                          }
@@ -175,37 +155,37 @@ const DashAcc = () => {
                                                       ))}
                                                    </>
                                                 ) : null}
-                                                {jakr ? (
+                                                {kota.jakr ? (
                                                    <>
-                                                      {Jakarta.map((e) => (
+                                                      {Kota.Jakarta.map((e) => (
                                                          <option>{e}</option>
                                                       ))}
                                                    </>
                                                 ) : null}
-                                                {westJ ? (
+                                                {kota.westJ ? (
                                                    <>
-                                                      {Jabar.map((e) => (
+                                                      {Kota.Jabar.map((e) => (
                                                          <option>{e}</option>
                                                       ))}
                                                    </>
                                                 ) : null}
-                                                {eastJ ? (
+                                                {kota.eastJ ? (
                                                    <>
-                                                      {Jatim.map((e) => (
+                                                      {Kota.Jatim.map((e) => (
                                                          <option>{e}</option>
                                                       ))}
                                                    </>
                                                 ) : null}
-                                                {northS ? (
+                                                {kota.northS ? (
                                                    <>
-                                                      {Sumut.map((e) => (
+                                                      {Kota.Sumut.map((e) => (
                                                          <option>{e}</option>
                                                       ))}
                                                    </>
                                                 ) : null}
-                                                {papua ? (
+                                                {kota.papua ? (
                                                    <>
-                                                      {Papua.map((e) => (
+                                                      {Kota.Papua.map((e) => (
                                                          <option>{e}</option>
                                                       ))}
                                                    </>

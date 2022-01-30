@@ -9,28 +9,26 @@ const SuccessCheck = () => {
    return (
       <>
          <Container>
-            <div className="page-success" style={{ marginTop: "120px" }}>
-               <div className="section-success">
-                  <div className="row align-item-center row-login justify-content-center">
-                     <div className="col-lg-6 text-center">
-                        <img src="images/success.svg" alt="" className="mb-4" />
-                        <h2>Transition Proceed</h2>
-                        <p>Silahkan tunggu pesan email dari kami dan kami akan memproses pesanan anda dengan cepat!</p>
-                        <Row className="justify-content-center">
-                           <Link to="/dashboard" className="text-decoration-none">
-                              <Button variant="outline-success" className="w-75">
-                                 My Dashboard
-                              </Button>
-                           </Link>
-                        </Row>
-                        <Row className="justify-content-center mt-4">
-                           <Link to="/" className="text-decoration-none">
-                              <Button variant="outline-info" style={{ color: war.color }} className="w-75" onMouseOver={() => setWar({ color: "#fff" })} onMouseOut={() => setWar({ color: "#0dcaf0" })}>
-                                 Go To Shopping
-                              </Button>
-                           </Link>
-                        </Row>
-                     </div>
+            <div style={{ marginTop: "120px" }}>
+               <div className="row align-item-center justify-content-center" style={{ marginBottom: "180px" }}>
+                  <div className="col-lg-6 text-center">
+                     <img src="images/success.svg" alt="" className="mb-4" />
+                     <h2>Transition Proceed</h2>
+                     <p>Silahkan tunggu pesan email dari kami dan kami akan memproses pesanan anda dengan cepat!</p>
+                     <Row className="justify-content-center">
+                        <Link to="/dashboard" className="text-decoration-none">
+                           <Button variant="outline-success" className="w-75">
+                              My Dashboard
+                           </Button>
+                        </Link>
+                     </Row>
+                     <Row className="justify-content-center mt-4">
+                        <Link to="/" className="text-decoration-none">
+                           <Button variant="outline-info" style={{ color: war.color }} className="w-75" onMouseOver={() => setWar({ color: "#fff" })} onMouseOut={() => setWar({ color: "#0dcaf0" })}>
+                              Go To Shopping
+                           </Button>
+                        </Link>
+                     </Row>
                   </div>
                </div>
             </div>

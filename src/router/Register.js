@@ -69,11 +69,11 @@ function Register() {
                         <Form.Text className="text-muted">Minimal banyak huruf untuk Nama adalah 4.</Form.Text>
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingEmail" label="Email address" className="mb-3">
-                        <Form.Control className="is-invalid" type="email" placeholder="name@example.com" autoComplete="off" value={input.email} onChange={formEmail} />
+                        <Form.Control className="" type="email" placeholder="name@example.com" autoComplete="off" value={input.email} onChange={formEmail} />
                         <Form.Text className="text-muted">Minimal banyak huruf untuk Email adalah 6.</Form.Text>
                      </FloatingLabel>
                      <FloatingLabel controlId="floatingPassword" label="Password">
-                        <Form.Control className="is-invalid" type="password" placeholder="Password" autoComplete="off" value={input.password} onChange={formPassw} />
+                        <Form.Control className="" type="password" placeholder="Password" autoComplete="off" value={input.password} onChange={formPassw} />
                         <Form.Text className="text-muted">Minimal banyak huruf untuk Password adalah 6.</Form.Text>
                      </FloatingLabel>
                      <hr />

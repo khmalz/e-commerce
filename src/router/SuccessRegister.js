@@ -9,9 +9,9 @@ const SuccessRegister = () => {
    return (
       <>
          <Container>
-            <div className="page-success" style={{ marginTop: "120px" }}>
-               <div className="section-success">
-                  <div className="row align-item-center row-login justify-content-center">
+            <div style={{ marginTop: "120px" }}>
+               <div>
+                  <div className="row align-item-center justify-content-center" style={{ marginBottom: "180px" }}>
                      <div className="col-lg-6 text-center">
                         <img src="images/success.svg" alt="" className="mb-4" />
                         <h2 className="fw-bold">Welcome To Store</h2>

@@ -6,12 +6,12 @@ const DashTransactions = () => {
    const [aktif, setAktif] = useState(false);
    const monitor = window.innerWidth < 800;
    const monitorK = window.innerWidth < 500;
-   const [stic, setStic] = useState("200px");
+   const [stic, setStic] = useState("235px");
 
    const dashClick = () => {
-      const wrap = document.querySelector("#wrapper");
       setAktif(!aktif);
-      wrap.classList.toggle("toggled");
+      const sidebar = document.querySelector("#sidebars");
+      sidebar.classList.toggle("active-nav");
    };
 
    useEffect(() => {
@@ -22,12 +22,12 @@ const DashTransactions = () => {
 
    return (
       <>
-         <div className="page-dashboard overflow-hidden" style={monitor ? { marginTop: "-35px" } : null}>
-            <div className="d-flex" id="wrapper">
+         <div style={monitor ? { marginTop: "-35px" } : { overflow: "hidden" }}>
+            <div className="d-flex">
                <NavDashboard />
 
-               <div id="page-content-wrapper" style={{ marginLeft: stic }}>
-                  <Navbar expand="lg" fixed="top" className="navbar-light navbar-store navbar-fixed-top">
+               <div style={monitorK ? { marginTop: "100px" } : {} && { marginLeft: stic, backgroundColor: "#f5f5fb" }}>
+                  <Navbar expand="lg" fixed="top" bg={monitorK ? "light" : ""}>
                      <Container fluid>
                         <Button variant={aktif ? "primary" : "outline-primary"} className="d-md-none me-auto me-2" onClick={dashClick} id="menu-toggle">
                            Menu
@@ -37,22 +37,20 @@ const DashTransactions = () => {
                         </Button>
 
                         <Navbar.Collapse id="navbarSupportedContent">
-                           <ul className="navbar-nav d-none d-lg-flex ms-auto">
-                              <li class="nav-item dropdown">
-                                 <Nav.Link class="nav-link dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 profile-picture mb-1" />
+                           <Nav className="d-none d-lg-flex ms-auto">
+                              <Nav.Link className="dropdown">
+                                 <Nav.Link className="dropdown-toggle" href="#a" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/user.jpg" alt="" className="rounded-circle me-2 mb-1" style={{ maxHeight: "45px", marginLeft: "-20px" }} />
                                     <span className="fw-bold" style={{ fontSize: "1.05em" }}>
                                        Hallo, Akmal
                                     </span>
                                  </Nav.Link>
-                              </li>
-                              <li className="nav-item">
-                                 <a href="#a" className="nav-link d-line-block mt-2">
-                                    <img src="images/icon_cart.svg" alt="" />
-                                    <div className="cart-badge">3</div>
-                                 </a>
-                              </li>
-                           </ul>
+                              </Nav.Link>
+                              <Nav.Link className="d-inline-block mt-3" style={{ marginLeft: "-13px " }}>
+                                 <img src="images/icon_cart.svg" alt="" />
+                                 <div className="cart">3</div>
+                              </Nav.Link>
+                           </Nav>
 
                            <ul className="navbar-nav d-block d-lg-none">
                               <li className="nav-item">
@@ -70,7 +68,7 @@ const DashTransactions = () => {
                      </Container>
                   </Navbar>
 
-                  <div className="section-content section-dashboard-home" style={monitorK ? { width: "95vw", height: "100vh" } : { width: "85vw", height: "100vh" }}>
+                  <div className="content" style={monitorK ? { height: "100vh" } : { width: "83vw", height: "100vh", paddingRight: "1vw" }}>
                      <Container fluid>
                         <div>
                            <h5 className="fw-bold fs-5">Transactions</h5>
