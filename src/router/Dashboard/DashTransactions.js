@@ -86,8 +86,8 @@ const DashTransactions = () => {
                               </Nav.Link>
                            </Nav.Item>
                         </Nav>
-                        <div class="tab-content" id="myTabContent">
-                           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div className="tab-content" id="myTabContent">
+                           <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                               <Row className="mt-3">
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">
@@ -137,7 +137,7 @@ const DashTransactions = () => {
                                  </Col>
                               </Row>
                            </div>
-                           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                           <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                               <Row className="mt-3">
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">

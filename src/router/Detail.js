@@ -85,21 +85,21 @@ const Detail = () => {
 
          <Container className="container-img" onClick={imgClick}>
             <Row>
-               <Col lg={7}>
+               <Col lg={7} data-aos="zoom-in">
                   <img src="images/product-detail-1.jpg" className="w-100 h-100 jumbo" alt="" />
                </Col>
                <Col lg={2}>
                   <Row>
-                     <Col lg={12} className="col-3 mt-2 mt-lg-0">
+                     <Col lg={12} className="col-3 mt-2 mt-lg-0" data-aos="zoom-in">
                         <img className="thumb" src="images/product-detail-1.jpg" alt="" />
                      </Col>
-                     <Col lg={12} className="col-3 mt-2 mt-lg-0">
+                     <Col lg={12} className="col-3 mt-2 mt-lg-0" data-aos="zoom-in">
                         <img className="thumb" src="images/product-detail-2.jpg" alt="" />
                      </Col>
-                     <Col lg={12} className="col-3 mt-2 mt-lg-0">
+                     <Col lg={12} className="col-3 mt-2 mt-lg-0" data-aos="zoom-in">
                         <img className="thumb" src="images/product-detail-3.jpg" alt="" />
                      </Col>
-                     <Col lg={12} className="col-3 mt-2 mt-lg-0">
+                     <Col lg={12} className="col-3 mt-2 mt-lg-0" data-aos="zoom-in">
                         <img className="thumb" src="images/product-detail-4.jpg" alt="" />
                      </Col>
                   </Row>
@@ -125,8 +125,8 @@ const Detail = () => {
                </Col>
             </Row>
             <Row>
-               <Col lg={7} className="col-12 text-justify">
-                  <hr className="shadow-lg" />
+               <Col lg={7} className="col-12 text-justify" data-aos="fade-up" data-aos-delay="100">
+                  <hr className="shadow-lg border-dark" />
                   <h6 className="fw-bold">Deskripsi Produk</h6>
                   <p>
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem incidunt voluptas tempore veritatis facere quos, saepe dolor magnam sunt, quod officia ratione ut consequatur! Consequatur, vero? Doloremque, in id.
@@ -138,12 +138,12 @@ const Detail = () => {
             {/* ------------------------------------------------------------------------------------------------- | Review | --------------------------------------------------------------------------------------------------- */}
 
             <Row>
-               <Col>
+               <Col data-aos="fade-up">
                   <h6 className="fw-bold pointer mt-3">Costumer Review (3)</h6>
                </Col>
             </Row>
             <Row>
-               <Col lg={7}>
+               <Col lg={7} data-aos="fade-up">
                   <ul className="list-unstyled">
                      <li className="d-flex mt-4 mb-1">
                         <img src="images/customer-review-1.png" className="pointer me-2 rounded circle" width="50" height="40" alt="" />

@@ -8,7 +8,7 @@ const SuccessCheck = () => {
 
    return (
       <>
-         <Container>
+         <Container data-aos="zoom-in">
             <div style={{ marginTop: "120px" }}>
                <div className="row align-item-center justify-content-center" style={{ marginBottom: "180px" }}>
                   <div className="col-lg-6 text-center">

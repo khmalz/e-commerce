@@ -35,8 +35,8 @@ body {
 }
 
 .scale .card-shadow:hover {
-  -webkit-box-shadow: 0 0 13px black;
-          box-shadow: 0 0 13px black;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.619);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.619);
   transition: 150ms;
   -webkit-transition: 150ms;
   -moz-transition: 150ms;

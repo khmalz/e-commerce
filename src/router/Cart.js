@@ -71,7 +71,7 @@ const Cart = () => {
 
          <Container className="mt-5">
             <Row>
-               <Col>
+               <Col data-aos="fade-down">
                   <nav aria-label="breadcrumb">
                      <ol className="breadcrumb">
                         <li className="breadcrumb-item">
@@ -90,7 +90,7 @@ const Cart = () => {
 
          <Container>
             <Row>
-               <Col className="col-12">
+               <Col className="col-12" data-aos="zoom-in">
                   <Table borderless={true}>
                      <thead>
                         <tr>
@@ -158,12 +158,12 @@ const Cart = () => {
             {/* -------------------------------------------------------------------------------------- | Shipping Details | ---------------------------------------------------------------------------------------------------  */}
 
             <Row>
-               <Col>
+               <Col data-aos="fade-up">
                   <h6 className="fw-bold">Shipping Details</h6>
                </Col>
             </Row>
             <Row>
-               <Col md={6}>
+               <Col md={6} data-aos="fade-up">
                   <Form>
                      <Form.Group controlId="formBasicAddress1">
                         <Form.Label className="fw-bold mt-4">Address 1</Form.Label>
@@ -171,7 +171,7 @@ const Cart = () => {
                      </Form.Group>
                   </Form>
                </Col>
-               <Col md={6}>
+               <Col md={6} data-aos="fade-up">
                   <Form>
                      <Form.Group controlId="formBasicAddress2">
                         <Form.Label className="fw-bold mt-4">Adress 2</Form.Label>
@@ -181,7 +181,7 @@ const Cart = () => {
                </Col>
             </Row>
             <Row>
-               <Col md={4}>
+               <Col md={4} data-aos="fade-up">
                   <Form.Label className="fw-bold mt-4">Province</Form.Label>
                   <Form.Select onChange={(e) => setCity(e.target.value)} aria-label="Default select example">
                      <option disabled selected>
@@ -194,7 +194,7 @@ const Cart = () => {
                      <option value="Papua">Papua</option>
                   </Form.Select>
                </Col>
-               <Col md={4}>
+               <Col md={4} data-aos="fade-up">
                   <Form.Label className="fw-bold mt-4">City</Form.Label>
                   <Form.Select aria-label="Default select example">
                      {city === "Default" ? (
@@ -242,7 +242,7 @@ const Cart = () => {
                      ) : null}
                   </Form.Select>
                </Col>
-               <Col md={4}>
+               <Col md={4} data-aos="fade-up">
                   <Form>
                      <Form.Group className="mb-3" controlId="formBasicPostal">
                         <Form.Label className="fw-bold mt-4">Postal Code</Form.Label>
@@ -252,7 +252,7 @@ const Cart = () => {
                </Col>
             </Row>
             <Row>
-               <Col md={6}>
+               <Col md={6} data-aos="fade-up">
                   <Form>
                      <Form.Group controlId="formBasicCountry">
                         <Form.Label className="fw-bold mt-4">Country</Form.Label>
@@ -260,7 +260,7 @@ const Cart = () => {
                      </Form.Group>
                   </Form>
                </Col>
-               <Col md={6}>
+               <Col md={6} data-aos="fade-up">
                   <Form>
                      <Form.Group controlId="formBasicPhone">
                         <Form.Label className="fw-bold mt-4">No Phone</Form.Label>
@@ -273,36 +273,36 @@ const Cart = () => {
             {/* ---------------------------------------------------------------------------------------------- | Payment Information | -------------------------------------------------------------------------------------------------  */}
             <hr />
             <Row>
-               <Col>
+               <Col data-aos="fade-down" data-aos-delay="100">
                   <h5 className="fw-bold mb-3 pb-2">Payment Informations</h5>
                </Col>
             </Row>
             <Row>
-               <Col md={2} className="col-4">
+               <Col md={2} className="col-4" data-aos="zoom-out">
                   <p className="mb-0" style={{ fontSize: "1.1rem" }}>
                      $17,94
                   </p>
                   <p className="text-secondary">Country Task</p>
                </Col>
-               <Col md={3} className="col-4">
+               <Col md={3} className="col-4" data-aos="zoom-out">
                   <p className="mb-0" style={{ fontSize: "1.1rem" }}>
                      $10,5
                   </p>
                   <p className="text-secondary">Product Insurance</p>
                </Col>
-               <Col md={2} className="col-4">
+               <Col md={2} className="col-4" data-aos="zoom-out">
                   <p className="mb-0" style={{ fontSize: "1.1rem" }}>
                      $48,38
                   </p>
                   <p className="text-secondary">Ship to Jakarta</p>
                </Col>
-               <Col md={2} className="col-4">
+               <Col md={2} className="col-4" data-aos="zoom-out">
                   <p className="text-success fw-bold mb-0" style={{ fontSize: "1.1rem" }}>
                      $1.536, 42
                   </p>
                   <p className="text-secondary">Total</p>
                </Col>
-               <Col md={3} className="col-8 text-center">
+               <Col md={3} className="col-8 text-center" data-aos="zoom-out">
                   <Button variant="success" className="w-100" style={{ display: "blok" }}>
                      <Link to="/success" className="text-white text-decoration-none">
                         Checkout Now

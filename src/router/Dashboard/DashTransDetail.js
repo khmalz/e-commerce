@@ -97,40 +97,40 @@ const DashTransDetail = () => {
                            <Col>
                               <Form>
                                  {monitorK ? (
-                                    <div class="card flex-row p-2 pt-3">ha</div>
+                                    <div className="card flex-row p-2 pt-3">ha</div>
                                  ) : (
-                                    <div class="card flex-row p-2 pt-3">
-                                       <div class="card-header border-0">
+                                    <div className="card flex-row p-2 pt-3">
+                                       <div className="card-header border-0">
                                           <img src="images/product-detail-dashboard.png" alt="images" width="250" height="205" />
                                        </div>
-                                       <div class="px-2 ms-3" style={{ marginRight: "100px" }}>
+                                       <div className="px-2 ms-3" style={{ marginRight: "100px" }}>
                                           <Col className="mb-4">
-                                             <p class="dashboard-title m-0 mb-1 mt-2">Customer Name</p>
-                                             <h5 class="fs-6 fw-bold">Arz</h5>
+                                             <p className="dashboard-title m-0 mb-1 mt-2">Customer Name</p>
+                                             <h5 className="fs-6 fw-bold">Arz</h5>
                                           </Col>
                                           <Col className="mb-4 ">
-                                             <p class="dashboard-title m-0 mb-1">Date of Transaction</p>
-                                             <h5 class="fs-6 fw-bold">5 Oktober, 2021</h5>
+                                             <p className="dashboard-title m-0 mb-1">Date of Transaction</p>
+                                             <h5 className="fs-6 fw-bold">5 Oktober, 2021</h5>
                                           </Col>
                                           <Col className="mb-5">
-                                             <p class="dashboard-title m-0 mb-1">Total Amount</p>
-                                             <h5 class="fs-6 fw-bold">$45,184</h5>
+                                             <p className="dashboard-title m-0 mb-1">Total Amount</p>
+                                             <h5 className="fs-6 fw-bold">$45,184</h5>
                                           </Col>
                                        </div>
-                                       <div class="px-2 ms-5">
+                                       <div className="px-2 ms-5">
                                           <Col className="mb-4">
-                                             <p class="dashboard-title m-0 mb-1 mt-2">Product Name</p>
-                                             <h5 class="fs-6 fw-bold">DW Watch</h5>
+                                             <p className="dashboard-title m-0 mb-1 mt-2">Product Name</p>
+                                             <h5 className="fs-6 fw-bold">DW Watch</h5>
                                           </Col>
                                           <Col className="mb-4">
-                                             <p class="dashboard-title m-0 mb-1">Status</p>
-                                             <h5 class="fs-6 fw-bold" style={{ color: "#F32355" }}>
+                                             <p className="dashboard-title m-0 mb-1">Status</p>
+                                             <h5 className="fs-6 fw-bold" style={{ color: "#F32355" }}>
                                                 Pending
                                              </h5>
                                           </Col>
                                           <Col className="mb-5">
-                                             <p class="dashboard-title m-0 mb-1">Mobile</p>
-                                             <h5 class="fs-6 fw-bold">+62 858-3106-7841</h5>
+                                             <p className="dashboard-title m-0 mb-1">Mobile</p>
+                                             <h5 className="fs-6 fw-bold">+62 858-3106-7841</h5>
                                           </Col>
                                        </div>
                                     </div>
