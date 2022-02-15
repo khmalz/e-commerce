@@ -166,3 +166,23 @@ body {
    border-right: 4px solid #ff7158;
    color: #0c0d36;
 }
+
+.nav-pills {
+   .nav-link {
+      border-radius: 0 !important;
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      -ms-border-radius: 0 !important;
+      -o-border-radius: 0 !important;
+      color: #9191a9 !important;
+      font-weight: bold !important;
+      padding-top: 5px !important;
+
+      &.active {
+         color: #0c0d36 !important;
+         border-bottom: 3px solid #0c0d36 !important;
+         padding-top: 5px !important;
+         background: none !important;
+      }
+   }
+}
