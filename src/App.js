@@ -16,6 +16,8 @@ import DashAcc from "./router/Dashboard/DashAcc";
 import DashTransDetail from "./router/Dashboard/DashTransDetail";
 import Categories from "./router/Categories";
 import SuccessRegister from "./router/SuccessRegister";
+import DashProduct from "./router/Dashboard/DashProduct";
+import DashProductDetail from "./router/Dashboard/DashProductDetail";
 
 const App = () => {
    return (
@@ -35,6 +37,8 @@ const App = () => {
                <Route path="/dashboard-settings" component={DashSettings} />
                <Route path="/dashboard-account" component={DashAcc} />
                <Route path="/dashboard-transactions-details" component={DashTransDetail} />
+               <Route path="/dashboard-product" component={DashProduct} />
+               <Route path="/dashboard-product-detail" component={DashProductDetail} />
                <Route path="/nofound" component={Nofound} />
 
                <Redirect to="/nofound" />

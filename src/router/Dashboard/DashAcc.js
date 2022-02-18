@@ -105,7 +105,7 @@ const DashAcc = () => {
                            <Col>
                               <Form>
                                  <Card>
-                                    <Card.Body>
+                                    <Card.Body className="card-body-my">
                                        <Row>
                                           <Col md={6}>
                                              <Form>

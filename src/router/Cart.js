@@ -252,7 +252,7 @@ const Cart = () => {
                </Col>
             </Row>
             <Row>
-               <Col md={6} data-aos="fade-up">
+               <Col md={6} data-aos="fade-up" data-aos-delay="100">
                   <Form>
                      <Form.Group controlId="formBasicCountry">
                         <Form.Label className="fw-bold mt-4">Country</Form.Label>
@@ -260,7 +260,7 @@ const Cart = () => {
                      </Form.Group>
                   </Form>
                </Col>
-               <Col md={6} data-aos="fade-up">
+               <Col md={6} data-aos="fade-up" data-aos-delay="100">
                   <Form>
                      <Form.Group controlId="formBasicPhone">
                         <Form.Label className="fw-bold mt-4">No Phone</Form.Label>

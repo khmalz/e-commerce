@@ -92,7 +92,7 @@ const DashTransactions = () => {
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">
                                        <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                          <Card.Body>
+                                          <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
                                                    <img src="images/dashboard-icon-product1.png" alt="" />
@@ -107,7 +107,7 @@ const DashTransactions = () => {
 
                                     <Card className="border-0 card-list">
                                        <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                          <Card.Body>
+                                          <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
                                                    <img src="images/dashboard-icon-product2.png" alt="" />
@@ -122,7 +122,7 @@ const DashTransactions = () => {
 
                                     <Card className="border-0 card-list" style={{ marginBottom: "100px" }}>
                                        <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                          <Card.Body>
+                                          <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
                                                    <img src="images/dashboard-icon-product3.png" alt="" />
@@ -142,7 +142,7 @@ const DashTransactions = () => {
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">
                                        <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                          <Card.Body>
+                                          <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
                                                    <img src="images/product-card-4.png" width="45  " height="45  " alt="" />

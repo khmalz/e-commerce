@@ -108,7 +108,7 @@ function Home() {
             <Row>
                <Col md={4} lg={3} className="col-6" data-aos="fade-right" data-aos-delay="100">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-1.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Apple 12 Pro Max</h5>
@@ -119,7 +119,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-down" data-aos-delay="100">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-2.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Sneakers</h5>
@@ -130,7 +130,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-down" data-aos-delay="100">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-3.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Sofa</h5>
@@ -141,7 +141,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-left" data-aos-delay="100">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-4.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Parfume</h5>
@@ -152,7 +152,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-right" data-aos-delay="200">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-5.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Jam</h5>
@@ -163,7 +163,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-up" data-aos-delay="200">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-6.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Camera</h5>
@@ -174,7 +174,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-up" data-aos-delay="200">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-7.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Bag</h5>
@@ -185,7 +185,7 @@ function Home() {
                </Col>
                <Col md={4} lg={3} className="col-6" data-aos="fade-left" data-aos-delay="200">
                   <a href="/detail" className="text-decoration-none">
-                     <Card href="/detail" className="border-0 text-decoration-none text-dark">
+                     <Card href="/detail" className="border-0 text-decoration-none text-dark zoom">
                         <img src="images/products-8.jpg" className="card-img-top" alt="..." />
                         <Card.Body>
                            <h5 className=" text-dark">Make Up</h5>

@@ -117,14 +117,14 @@ body {
   margin-left: -10px;
 }
 
-.card-title {
+.dash-card-subtitle {
   font-size: 1rem;
   color: #c5c5c5;
 }
 
-.card-subtitle {
+.dash-card-title {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 28px;
   color: #0c0d36;
 }
 
@@ -190,5 +190,23 @@ body {
   border-bottom: 3px solid #0c0d36 !important;
   padding-top: 5px !important;
   background: none !important;
+}
+
+.card-body {
+  padding: 1rem 0 !important;
+}
+
+.card-body-my {
+  padding: 1rem 1rem !important;
+}
+
+.card-title,
+.card-subtitle {
+  font-size: 1.2rem !important;
+}
+
+.bg-merah-x {
+  background-color: #e0464698 !important;
+  padding: 2px;
 }
 /*# sourceMappingURL=main.css.map */

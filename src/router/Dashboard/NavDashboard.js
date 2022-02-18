@@ -24,8 +24,8 @@ const NavDashboard = () => {
                      Dashboard
                   </Nav.Link>
                </NavLink>
-               <NavLink to="/dashboard-product" className="text-decoration-none mt-3 side-list" onMouseOver={dashClick} onMouseOut={dashClick}>
-                  <Nav.Link style={lokasih === "/dashboard-product" ? { color: "black" } : { color: "#6c757d" }} href="#h">
+               <NavLink to="/dashboard-product" className={lokasih === "/dashboard-product-detail" ? "text-decoration-none mt-3 side-list active" : "text-decoration-none mt-3 side-list"} onMouseOver={dashClick} onMouseOut={dashClick}>
+                  <Nav.Link style={lokasih === "/dashboard-product" || lokasih === "/dashboard-product-detail" ? { color: "black" } : { color: "#6c757d" }} href="#h">
                      My Product
                   </Nav.Link>
                </NavLink>

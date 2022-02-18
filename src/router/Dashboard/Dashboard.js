@@ -70,25 +70,25 @@ const Dashboard = () => {
                            <Row>
                               <Col md={4}>
                                  <Card className="mb-2">
-                                    <Card.Body>
-                                       <div className="card-title">Customer</div>
-                                       <div className="card-subtitle">$16,300</div>
+                                    <Card.Body className="card-body-my">
+                                       <div className="dash-card-title">Customer</div>
+                                       <div className="dash-card-subtitle">$16,300</div>
                                     </Card.Body>
                                  </Card>
                               </Col>
                               <Col md={4}>
                                  <Card className="mb-2">
-                                    <Card.Body>
-                                       <div className="card-title">Revenue</div>
-                                       <div className="card-subtitle">$893,787</div>
+                                    <Card.Body className="card-body-my">
+                                       <div className="dash-card-title">Revenue</div>
+                                       <div className="dash-card-subtitle">$893,787</div>
                                     </Card.Body>
                                  </Card>
                               </Col>
                               <Col md={4}>
                                  <Card className="mb-2">
-                                    <Card.Body>
-                                       <div className="card-title">Transaction</div>
-                                       <div className="card-subtitle">$25.700,000</div>
+                                    <Card.Body className="card-body-my">
+                                       <div className="dash-card-title">Transaction</div>
+                                       <div className="dash-card-subtitle">$25.700,000</div>
                                     </Card.Body>
                                  </Card>
                               </Col>
@@ -100,7 +100,7 @@ const Dashboard = () => {
 
                                  <Card className="border-0 card-list">
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                       <Card.Body>
+                                       <Card.Body className="card-body-my">
                                           <Row className="fw-bolder">
                                              <Col md={1}>
                                                 <img src="images/dashboard-icon-product1.png" alt="" />
@@ -118,7 +118,7 @@ const Dashboard = () => {
 
                                  <Card className="border-0 card-list">
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                       <Card.Body>
+                                       <Card.Body className="card-body-my">
                                           <Row className="fw-bold">
                                              <Col md={1}>
                                                 <img src="images/dashboard-icon-product2.png" alt="" />
@@ -136,7 +136,7 @@ const Dashboard = () => {
 
                                  <Card className="border-0 card-list">
                                     <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
-                                       <Card.Body>
+                                       <Card.Body className="card-body-my">
                                           <Row className="fw-bold">
                                              <Col md={1}>
                                                 <img src="images/dashboard-icon-product3.png" alt="" />
