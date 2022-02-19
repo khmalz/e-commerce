@@ -142,25 +142,19 @@ const DashProductDetail = () => {
                                     <Row className="justify-content-between">
                                        <Col md={3}>
                                           <div className="position-relative">
-                                             <span className="position-absolute bg-merah-x rounded-circle pointer " style={{ right: "62px", top: "-5px", fontSize: "0.8rem" }}>
-                                                ❌
-                                             </span>
+                                             <img className="position-absolute rounded-circle pointer" style={{ right: "60px", top: "-9px", width: "30px" }} src="images/icon-delete.svg" alt="" />
                                              <img src="images/product-card-1.png" alt="" />
                                           </div>
                                        </Col>
                                        <Col md={3}>
                                           <div className="position-relative">
-                                             <span className="position-absolute bg-merah-x rounded-circle pointer" style={{ right: "62px", top: "-5px", fontSize: "0.8rem" }}>
-                                                ❌
-                                             </span>
+                                             <img className="position-absolute rounded-circle pointer" style={{ right: "60px", top: "-9px", width: "30px" }} src="images/icon-delete.svg" alt="" />
                                              <img src="images/product-card-2.png" alt="" />
                                           </div>
                                        </Col>
                                        <Col md={3}>
                                           <div className="position-relative">
-                                             <span className="position-absolute bg-merah-x rounded-circle pointer" style={{ right: "62px", top: "-5px", fontSize: "0.8rem" }}>
-                                                ❌
-                                             </span>
+                                             <img className="position-absolute rounded-circle pointer" style={{ right: "60px", top: "-9px", width: "30px" }} src="images/icon-delete.svg" alt="" />
                                              <img src="images/product-card-3.png" alt="" />
                                           </div>
                                        </Col>
