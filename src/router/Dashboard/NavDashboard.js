@@ -29,8 +29,13 @@ const NavDashboard = () => {
                      My Product
                   </Nav.Link>
                </NavLink>
-               <NavLink to="/dashboard-transactions" className={lokasih === "/dashboard-transactions-details" ? "text-decoration-none mt-3 side-list active" : "text-decoration-none mt-3 side-list"} onMouseOver={dashClick} onMouseOut={dashClick}>
-                  <Nav.Link style={lokasih === "/dashboard-transactions" || lokasih === "/dashboard-transactions-details" ? { color: "black" } : { color: "#6c757d" }} href="#h">
+               <NavLink
+                  to="/dashboard-transactions"
+                  className={lokasih === "/dashboard-transactions-details-pending" || lokasih === "/dashboard-transactions-details-success" ? "text-decoration-none mt-3 side-list active" : "text-decoration-none mt-3 side-list"}
+                  onMouseOver={dashClick}
+                  onMouseOut={dashClick}
+               >
+                  <Nav.Link style={lokasih === "/dashboard-transactions" || lokasih === "/dashboard-transactions-details-pending" || lokasih === "/dashboard-transactions-details-success" ? { color: "black" } : { color: "#6c757d" }} href="#h">
                      Transactions
                   </Nav.Link>
                </NavLink>

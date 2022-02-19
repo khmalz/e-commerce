@@ -13,11 +13,12 @@ import DashTransactions from "./router/Dashboard/DashTransactions";
 import DashSettings from "./router/Dashboard/DashSettings";
 import SuccessCheck from "./router/SuccessCheck";
 import DashAcc from "./router/Dashboard/DashAcc";
-import DashTransDetail from "./router/Dashboard/DashTransDetail";
+import DashTransDetailPen from "./router/Dashboard/DashTransDetailPen";
 import Categories from "./router/Categories";
 import SuccessRegister from "./router/SuccessRegister";
 import DashProduct from "./router/Dashboard/DashProduct";
 import DashProductDetail from "./router/Dashboard/DashProductDetail";
+import DashTransDetailSuc from "./router/Dashboard/DashTransDetailSuc";
 
 const App = () => {
    return (
@@ -36,7 +37,8 @@ const App = () => {
                <Route path="/dashboard-transactions" component={DashTransactions} />
                <Route path="/dashboard-settings" component={DashSettings} />
                <Route path="/dashboard-account" component={DashAcc} />
-               <Route path="/dashboard-transactions-details" component={DashTransDetail} />
+               <Route path="/dashboard-transactions-details-pending" component={DashTransDetailPen} />
+               <Route path="/dashboard-transactions-details-success" component={DashTransDetailSuc} />
                <Route path="/dashboard-product" component={DashProduct} />
                <Route path="/dashboard-product-detail" component={DashProductDetail} />
                <Route path="/nofound" component={Nofound} />

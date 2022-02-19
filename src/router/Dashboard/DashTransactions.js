@@ -7,6 +7,9 @@ const DashTransactions = () => {
    const monitor = window.innerWidth < 800;
    const monitorK = window.innerWidth < 500;
    const [stic, setStic] = useState("235px");
+   const [link1, setLink1] = useState("");
+   const [link2, setLink2] = useState("");
+   const [link3, setLink3] = useState("");
 
    const dashClick = () => {
       setAktif(!aktif);
@@ -18,7 +21,30 @@ const DashTransactions = () => {
       if (monitorK) {
          setStic("0");
       }
-   }, [monitorK]);
+
+      for (let i = 0; i < 3; i++) {
+         var pilih = Math.random();
+         if (link1.length < 4) {
+            if (pilih < 0.5) {
+               setLink1("/dashboard-transactions-details-pending");
+            } else {
+               setLink1("/dashboard-transactions-details-success");
+            }
+         } else if (link1.length > 5 && link2.length < 4) {
+            if (pilih < 0.5) {
+               setLink2("/dashboard-transactions-details-pending");
+            } else {
+               setLink2("/dashboard-transactions-details-success");
+            }
+         } else if (link1.length > 5 && link2.length > 5 && link3.length < 4) {
+            if (pilih < 0.5) {
+               setLink3("/dashboard-transactions-details-pending");
+            } else {
+               setLink3("/dashboard-transactions-details-success");
+            }
+         }
+      }
+   }, [monitorK, link1.length, link2.length, link3.length]);
 
    return (
       <>
@@ -91,7 +117,7 @@ const DashTransactions = () => {
                               <Row className="mt-3">
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">
-                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                       <a href={link1} className=" d-block text-decoration-none">
                                           <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
@@ -106,7 +132,7 @@ const DashTransactions = () => {
                                     </Card>
 
                                     <Card className="border-0 card-list">
-                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                       <a href={link2} className=" d-block text-decoration-none">
                                           <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
@@ -121,7 +147,7 @@ const DashTransactions = () => {
                                     </Card>
 
                                     <Card className="border-0 card-list" style={{ marginBottom: "100px" }}>
-                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                       <a href={link3} className=" d-block text-decoration-none">
                                           <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
@@ -141,7 +167,7 @@ const DashTransactions = () => {
                               <Row className="mt-3">
                                  <Col className="col-12 mt-2">
                                     <Card className="border-0 card-list">
-                                       <a href="/dashboard-transactions-details" className=" d-block text-decoration-none">
+                                       <a href={link1} className=" d-block text-decoration-none">
                                           <Card.Body className="card-body-my">
                                              <Row className="fw-bold">
                                                 <Col md={1}>
